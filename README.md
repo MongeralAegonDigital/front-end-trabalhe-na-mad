@@ -1,6 +1,6 @@
 # Front-End: Trabalhe na MAD
 
-Caro, desenvolvedor esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
 
 Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
 
