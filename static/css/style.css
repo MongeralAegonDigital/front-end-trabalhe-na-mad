@@ -1,0 +1,36 @@
+.wrap {
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative; }
+  @media only screen and (max-width: 480px) {
+    .wrap {
+      padding: 0 10px; } }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .wrap {
+      padding: 0 10px; } }
+
+.fl {
+  display: inline;
+  float: left; }
+
+.fr {
+  display: inline;
+  float: right; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  height: 100%; }
+
+.btn {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 18px;
+  text-transform: uppercase; }

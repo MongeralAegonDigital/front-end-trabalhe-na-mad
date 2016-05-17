@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="stylesheet" href="static/css/reset.css">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon" />
+	<link rel="icon" href="static/img/favicon.png"  type="image/jpeg">
+
+	
+	<title>Lista Repositório</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+	<header>
+		<div class="wrap">
+			<h1 class="logo"></h1>
+			<div class="box-search">
+				<input type="text" name="name" class="name" placeholder="Digite o nome">
+				<button class="button-search"></button>
+			</div>
+		</div>
+		
+	</header>
+	<footer>
+		<div class="wrap">
+			<p class="copyright">Todos os direitos reservador - Mongeral Aegon - 2016</p>
+			<p class="developer">Washington Luiz</p>
+		</div>
+	</footer>
+	<!-- <div id="w">
+		<form method="post" action="" name="formul">
+		    <input type="text" name="nome" class="nome">
+		    <input type="submit" value="Enviar" class="enviar">
+		</form> 
+
+		<div id="ghapidata" class="clearfix"></div>
+	</div> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+		$('.enviar').on('click', function(e){
+			e.preventDefault();
+			var elemento = $(this).prev();
+			var nomes = elemento.val();
+			
+			$.getJSON('https://api.github.com/users/'+nomes+'/repos', function(data) {
+
+			    var select = '<ul>';
+			    for (var i in data) {
+
+			         select += '<li>'+ data[i].name + '</li>';
+
+			    }
+			    select += '</ul>';
+			    $('#ghapidata').html(select);
+
+			});
+		});
+	</script>
+</body>
+</html>
