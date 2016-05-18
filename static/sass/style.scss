@@ -3,3 +3,142 @@
 @import 'header.scss';
 @import 'footer.scss';
 
+//Content
+
+.main{
+	color: #333;
+	line-height: 1.6;
+	font-family: arial;
+	padding-bottom: 70px;
+	@include grid-breakpoint(phone){
+    	line-height: 1.4;
+  	}
+  	.box-avatar{
+		width: 100px;
+		@include grid-breakpoint(phone, tablet){
+	    	margin: 0 auto;
+	  	}
+  	}
+  	.avatar{
+  		@include borderRadius(50%);
+  		width: 100%;
+  	}
+	.url-owner{
+		display: inline-block;
+		text-align: right;
+		-webkit-transition: opacity 0.5s;
+		transition: opacity 0.5s;
+		width: 50%;
+		@include grid-breakpoint(phone, tablet){
+			text-align: center;
+	    	width: 100%;
+	  	}
+		&:hover{
+			opacity: 0.8;
+			-webkit-transition: opacity 0.5s;
+			transition: opacity 0.5s;
+		}
+	}
+	.name-owner, .url-owner{
+		color: #006db2;
+	    font-family: monospace;
+		font-size: 18px;
+		@include grid-breakpoint(phone, tablet){
+			font-size: 14px;
+	  	}
+	}
+	.name-owner{
+		display: inline-block;
+		text-align: left;
+		width: 49%;
+		@include grid-breakpoint(phone, tablet){
+			text-align: center;
+	    	width: 100%;
+	  	}
+	}
+	.titulo-vaga{
+		border-bottom: 1px solid #006db2;
+		font-size: 2.25em;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		padding-bottom: 0.3em;
+		@include grid-breakpoint(phone){
+	    	font-size: 1.25em;
+	  	}
+	}
+	strong{
+		font-size: 20px;
+    	display: block;
+		margin-bottom: 20px;
+	}
+	ul{
+		list-style: inherit;
+	}
+	.list-repo{
+		@include borderRadius(4px);
+		border: 1px solid #d5d5d5;
+		list-style: none;
+		margin-top: 5px;
+		padding: 10px 20px;
+		@include grid-breakpoint(phone){
+			padding: 10px 5px;
+	  	}
+		li{
+			background: #f7f7f7;
+			border-top: 1px solid #d5d5d5;
+			padding: 10px 0;
+			position: relative;
+			&:hover{
+				background: rgba(212, 212, 212, 0.3);
+			}
+			&:first-child{
+				border-top: none;
+			}
+			div{
+				@include borderRadius(4px);
+				background-color: #eee;
+				background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+				background-image: linear-gradient(#fcfcfc, #eee);
+				border: 1px solid #d5d5d5;
+				color: #333;
+				display: inline-block;
+				font-size: 12px;
+				float: right;
+				height: 26px;
+    			line-height: 26px;
+			    padding-left: 22px;
+				position: absolute;
+				right: 0;
+				width: 80px;
+				span{
+					@include borderRadius(4px);
+					background: #fff;
+					border-left: 1px solid #d5d5d5;
+					float: right;
+					font-size: 12px;
+					height: 23px;
+					text-align: center;
+					width: 22px;
+				}
+			}
+			.name-repo{
+				@include grid-breakpoint(phone){
+					display: inline-block;
+					font-size: 12px;
+					width: 115px;
+			  	}
+			}
+			.star{
+				background: url(../img/star.png)left center no-repeat;
+				background-size: 20px;
+				right: 90px;
+			}
+			.fork{
+				background: url(../img/fork.png) 5px center no-repeat;
+				background-size: 10px;
+
+			}
+		}
+	}
+}

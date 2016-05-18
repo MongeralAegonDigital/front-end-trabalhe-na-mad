@@ -1,0 +1,23 @@
+.footer{
+	background: #006db2;
+	bottom: 0;
+	color: #ffffff;
+    font-family: serif;
+    font-size: 20px;
+	left: 0;
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+  	@include grid-breakpoint(phone, tablet){
+		font-size: 16px;
+    	line-height: 1.4;
+    	padding: 10px 0;
+    	text-align: center;
+  	}
+  	.copyright, .developer{
+  		@include grid-breakpoint(phone){
+  			display: block;
+	    	float: none;
+	  	}
+  	}
+}

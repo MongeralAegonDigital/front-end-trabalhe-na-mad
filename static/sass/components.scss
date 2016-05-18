@@ -61,7 +61,9 @@
     padding: 0 10px;
   }
 }
-
+.off{
+  display: none;
+}
 .fl{
   display: inline;
   float: left;
@@ -81,11 +83,16 @@
   height: 100%;
 }
 
-  //Botões
-  .btn{
-    @include borderRadius(4px);
-    border: none;
-    cursor: pointer;
-    padding: 5px 18px;
-    text-transform: uppercase;
-  }
+//Botões
+.btn{
+  @include borderRadius(4px);
+  border: none;
+  cursor: pointer;
+  padding: 5px 18px;
+  text-transform: uppercase;
+}
+
+//Fill do google chrome
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset;
+}
