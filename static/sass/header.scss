@@ -1,0 +1,43 @@
+.header{
+	background: #ffffff;
+	border-bottom: 1px solid #006db2;
+	border-top: 5px solid #006db2;
+	height: 100px;
+	margin-bottom: 20px;
+    padding: 30px 20px 20px 20px;
+    @include grid-breakpoint(phone){
+    	height: 80px;
+    	padding: 20px 0;
+  	}
+    .logo{
+		width: 216px;
+		@include grid-breakpoint(phone){
+	    	width: 120px;
+	  	}
+    }
+
+    .box-search{
+    	@include borderRadius(4px);
+    	border: 1px solid  #006db2;
+	    height: 32px;
+    	input[type="text"]{
+    		@include borderRadius(4px);
+    		border: none;
+    		height: 30px;
+    		padding-left: 10px;
+    		vertical-align: top;
+    		@include grid-breakpoint(phone){
+		    	width: 115px;
+		  	}
+    	}
+    	.button-search{
+    		background: url(../img/search.png)center center no-repeat;
+    		background-size: 30px;
+    		border: 0;
+    		border-left: 1px solid #006db2;
+    		cursor: pointer;
+    		height: 30px;
+    		width: 40px;
+    	}
+    }
+}

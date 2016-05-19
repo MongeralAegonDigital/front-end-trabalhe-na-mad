@@ -1,0 +1,110 @@
+//Variáveis
+@mixin borderRadius($val) {
+  border-radius: $val;
+  -webkit-border-radius: $val;
+}
+@mixin borderRadiusTop($val){
+  -webkit-border-top-left-radius: $val;
+  -webkit-border-top-right-radius: $val;
+  -moz-border-radius-topleft: $val;
+  -moz-border-radius-topright: $val;
+  border-top-left-radius: $val;
+  border-top-right-radius: $val;
+}
+@mixin borderRadiusBottom($val){
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+@mixin boxShadow($x, $y, $blur, $cor) {
+  box-shadow: $x $y $blur $cor;
+  -webkit-box-shadow: $x $y $blur $cor;
+  -moz-box-shadow: $x $y $blur $cor;
+  -o-box-shadow: $x $y $blur $cor;
+}
+
+@mixin gradiente($tipo, $cor1, $cor2) {
+  background-image: linear-gradient($tipo, $cor1, $cor2);
+  background-image: -webkit-linear-gradient($tipo, $cor1, $cor2);
+  background-image: -moz-linear-gradient($tipo, $cor1, $cor2);
+  background-image: -o-linear-gradient($tipo, $cor1, $cor2);
+  background-image: -ms-linear-gradient($tipo, $cor1, $cor2);
+}
+@mixin transicao($tipo, $tempo){
+  -webkit-transition: $tempo $tipo;
+  -moz-transition: $tempo $tipo;
+  -o-transition: $tempo $tipo;
+  transition: $tempo $tipo;
+}
+@mixin rotacionar($val){
+  -ms-transform: rotate($val);
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+@mixin hoverButton($r, $g, $b, $opacity){
+  transition: background 0.5s ease;
+  background: rgba($r, $g, $b, $opacity);
+}
+
+//Componentes
+.wrap{
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+  @include grid-breakpoint(phone, tablet){
+    padding: 0 10px;
+  }
+}
+.off{
+  display: none;
+}
+.fl{
+  display: inline;
+  float: left;
+}
+.fr{
+  display: inline;
+  float: right;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  height: 100%;
+}
+.msg-error{
+  color: red;
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  @include grid-breakpoint(phone){
+    font-size: 20px;
+  }
+  @include grid-breakpoint(tablet){
+    font-size: 30px;
+  }
+}
+
+//Botões
+.btn{
+  @include borderRadius(4px);
+  border: none;
+  cursor: pointer;
+  padding: 5px 18px;
+  text-transform: uppercase;
+}
+
+//Fill do google chrome
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset;
+}

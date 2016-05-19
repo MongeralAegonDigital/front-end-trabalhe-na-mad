@@ -1,0 +1,30 @@
+@mixin grid-breakpoint($devices...) {
+  @if ($grid-breakpoints != false) {
+    @each $device in $devices {
+      @if (map-get($grid-breakpoints,$device) != null) {
+        $break:map-get($grid-breakpoints,$device);
+        @if (length($break) > 3) {
+          @media only screen and (#{nth($break, 2)}-width: nth($break, 3)) and (#{nth($break, 4)}-width: nth($break, 5)) {
+            @content;
+          }
+        }
+        @else{
+          @media only screen and (#{nth($break, 2)}-width: nth($break, 3)) {
+            @content;
+          }
+        }
+      }
+      @else{
+        @warn $device "is not a valid grid breakpoint";
+      }
+    }
+  }
+}
+
+$grid-breakpoints:(
+  phone: 100% max 480px,
+  tablet: 100% min 481px max 768px,
+  tablet-large: 100% min 769px max 1024px,
+  desktop: 1024px min 1024px max 1300px,
+  desktop-large: 1350px min 1350px
+);
