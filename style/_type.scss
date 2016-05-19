@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,400,300');
+
+%font-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  padding: .5em 0;
+}
+
+%font-text {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 1em;
+  padding: .2em 0;
+}
+
+h1 {
+  @extend %font-title;
+  font-size: 3em;
+}
+
+h2{
+  @extend %font-title;
+  font-size: 2.5em;
+}
+
+h3{
+  @extend %font-title;
+  font-size: 2em;
+}
+
+h4 {
+  @extend %font-title;
+  font-size: 1.5em;
+}
+
+h5 {
+  @extend %font-title;
+  font-size: 1em;
+}
+
+p,
+a {
+  @extend %font-text;
+}

@@ -1,0 +1,28 @@
+@import "reset",
+        "variables",
+        "type";
+
+@import "components/search",
+        "components/repositories",
+        "components/profile";
+
+p {
+  color: $gray-darker;
+}
+
+a {
+  color: $gray-darker;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 960px) {
+  .container {
+    margin: 0 auto;
+    width: 960px;
+  }
+}
