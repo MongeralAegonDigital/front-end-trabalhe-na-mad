@@ -1,0 +1,18 @@
+.search {
+  background-color: $brand-primary;
+  box-sizing: border-box;
+  display: block;
+  padding: 1em;
+  width: 100%;
+
+  .search-input {
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 30px;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+  }
+}
