@@ -15,21 +15,21 @@ gulp.task('sass', function(){
 gulp.task('minify-css', function() {
   return gulp.src('static/css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('static/css'));
+    .pipe(gulp.dest('static/dist/css'));
 });
 
 /* Minifica o JS */
 gulp.task('minify-js', function() {
   return gulp.src('static/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('static/js'));
+    .pipe(gulp.dest('static/dist/js'));
 });
 
 /* Minifica o HTML */
 gulp.task('minify-html', function() {
   return gulp.src('./*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('static/dist/html'))
 });
 
 /* Verificando arquivos */
