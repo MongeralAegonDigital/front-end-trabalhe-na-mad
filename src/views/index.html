@@ -39,13 +39,22 @@
                                 <small class="text-muted">Exemplo: MongeralAegonDigital , adobe, Gulpjs, Google, globocom ...</small>
                             </fieldset>
                         </form>
-                        <div class="result-reposit" ng-show="infoRepOrg.show">
-                            <ul id="list-repo">
-                                <li class="item-reposit" ng-repeat="item in reposit.listOrg">
+                        <div class="formrepositorio__list result-reposit" ng-show="infoRepOrg.show">
+                            <ul>
+                                <li class="formrepositorio__item-reposit" ng-repeat="item in reposit.listOrg">
                                     {{ item.name }}
+                                    <!-- bloco informacoes repositorios -->
+                                    <div class="formrepositorio__list-info">
+                                        <ul>
+                                            <li ng-show="{{ item.description === '' || item.description === null ? false : true }}"><span class="formrepositorio__info-legenda">Sobre: </span><p>{{ item.description }}</p></li>
+                                            <li ng-show="{{ item.homepage === '' || item.homepage === null ? false : true }}"><span class="formrepositorio__info-home">Home Page: </span><a href="{{ item.homepage }}">{{ item.homepage }}</a></li>
+                                            <li ng-show="{{ item.forks === '' || item.forks === null ? false : true }}"><span class="formrepositorio__info-fork">Forks: </span><a href="{{ item.html_url }}/network/members">{{ item.forks }}</a></li>
+                                            <li><span class="formrepositorio__info-forkurl">Clone: </span><input type="text" class="clone" value="{{ item.clone_url }}" /></li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
-                            <p class="msg-erro">{{ msg.viewOrgError }}</p>
+                            <p class="formrepositorio__msg-erro">{{ msg.viewOrgError }}</p>
                         </div>
                     </div>
                 </div>
@@ -66,12 +75,21 @@
                             </fieldset>
                         </form>
                         <div class="result-reposit" ng-show="infoRepUser.show">
-                            <ul id="list-repo">
+                            <ul>
                                 <li class="item-reposit" ng-repeat="item in reposit.listUser">
                                     {{ item.name }}
+                                    <!-- bloco informacoes repositorios -->
+                                    <div class="formrepositorio__list-info">
+                                        <ul>
+                                            <li ng-show="{{ item.description === '' || item.description === null ? false : true }}"><span class="formrepositorio__info-legenda">Sobre: </span><p>{{ item.description }}</p></li>
+                                            <li ng-show="{{ item.homepage === '' || item.homepage === null ? false : true }}"><span class="formrepositorio__info-home">Home Page: </span><a href="{{ item.homepage }}">{{ item.homepage }}</a></li>
+                                            <li ng-show="{{ item.forks === '' || item.forks === null || item.forks === 0 ? false : true }}"><span class="formrepositorio__info-fork">Forks: </span><a href="{{ item.html_url }}/network/members">{{ item.forks }}</a></li>
+                                            <li><span class="formrepositorio__info-forkurl">Clone: </span><input type="text" class="clone" value="{{ item.clone_url }}" /></li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
-                            <p class="msg-erro">{{ msg.viewUserError }}</p>
+                            <p class="formrepositorio__msg-erro">{{ msg.viewUserError }}</p>
                         </div>
                     </div>
                 </div>

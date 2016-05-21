@@ -1,5 +1,6 @@
 var app = angular.module('app', []);
 app.controller('appController',['$scope','$http','$location', function($scope, $http, $location){
+
     // MSG DE ERRO
     $scope.msg = {
         orgError: 'Empresa não localizada. Verifique o campo e digite novamente.',
@@ -9,11 +10,9 @@ app.controller('appController',['$scope','$http','$location', function($scope, $
     };
     // inputs
     $scope.search = {
-        linkreposit: '',
-        repo: '',
         orgname: '',
         username: '',
-        filter: ''
+        filterOrg: ''
     };
 
     //// MOSTRA OU ESCONDE BLOCO
@@ -30,7 +29,7 @@ app.controller('appController',['$scope','$http','$location', function($scope, $
     // LISTA REPOSITORIOS
     $scope.reposit = {
         listOrg: '',
-        listUser: ''
+        listUser: '',
     };
 
     // BUSCA REPOSITORIO EMPRESA
@@ -51,7 +50,6 @@ app.controller('appController',['$scope','$http','$location', function($scope, $
                 $scope.msg.viewOrgError = '';
             }
         }).catch (function (response){
-            console.log(response.status);
             // esconde html da lista de informacao de repositorios
             $scope.infoRepOrg.show  = false;
             // limpa variavel - lista de repositorios
@@ -70,7 +68,6 @@ app.controller('appController',['$scope','$http','$location', function($scope, $
             method: 'GET',
             url: 'https://api.github.com/users/'+$scope.search.username+'/repos'
         }).then(function (response){
-            console.log(response);
             // mostra html da lista informacoes de repositorios
             $scope.infoRepUser.show = true;
             // passa dados da requisicao para variavel
@@ -83,7 +80,6 @@ app.controller('appController',['$scope','$http','$location', function($scope, $
                 $scope.msg.viewUserError = '';
             }
         }).catch (function (response){
-            console.log(response.status);
             // esconde html da lista de informacao de repositorios
             $scope.infoRepUser.show = false;
             // limpa variavel - lista de repositorios
