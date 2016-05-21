@@ -1,0 +1,130 @@
+// reset
+@import "../../../../node_modules/bootstrap/scss/_normalize.scss";
+// variables
+@import "../../../../node_modules/bootstrap/scss/_variables.scss";
+// mixins
+@import "../../../../node_modules/bootstrap/scss/_mixins.scss";
+// buttons
+@import "../../../../node_modules/bootstrap/scss/_buttons.scss";
+// input group
+@import "../../../../node_modules/bootstrap/scss/input-group.scss";
+// forms
+@import "../../../../node_modules/bootstrap/scss/_forms.scss";
+// grid
+@import "../../../../node_modules/bootstrap/scss/_grid.scss";
+// reboot
+@import "../../../../node_modules/bootstrap/scss/_reboot.scss";
+
+// variables
+@import 'imports/_variables';
+// responsive
+@import 'imports/_responsive';
+// fonts
+@import 'imports/_fonts.scss';
+
+/**
+* @section DEFAULT
+*/
+*{font-family: 'OfficinaSerifStd-Bold', sans-serif;}
+ul{list-style: none;}
+
+/**
+* @section GERAL
+*/
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+[class*="__wrapper"]{
+  @include make-container();
+  max-width: 960px;
+  margin: 0 auto;
+}
+[class*="__inside"]{
+  @include make-row();
+}
+[class*="col-"]{
+  @include make-col();
+}
+[class*="__block"]{
+    padding: 20px;
+}
+section{
+  h2{
+    text-align: center;
+  }
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+
+
+/**
+* @section TITULO
+*/
+section[class*="titlepage"]{
+    background: #09589C;
+    a{
+        color: #fff;
+        font-size: 56px;
+        position: relative;
+        text-decoration: none;
+
+        &:after{
+            content: "GitHub";
+            display: block;
+            position: absolute;
+            right: 26px;
+            font-size: 18px;
+            top: 100%;
+        }
+        img{
+            height: auto;
+            width: 100px;
+        }
+    }
+}
+
+/**
+* @subsection BLOCO
+*/
+h2{
+    margin: 30px 0;
+}
+.formrepositorio__inside{
+    align-items: stretch;
+
+    .formrepositorio__block{
+        background: #F8F6FD;
+    }
+    .result-reposit{
+        height: 120px;
+        background: #FFFFFF;
+        overflow: auto;
+
+        li{color: #09589C;}
+        p{
+            color: #E46767;
+            margin: 10px;
+        }
+    }
+}
+
+
+
+/**
+* @subsection FORM
+*/
+.text-muted{
+    color: #999;
+    font-weight: normal;
+}
+small{
+    display: block;
+    height: 60px;
+    padding: 10px;
+    width: 100%;
+}

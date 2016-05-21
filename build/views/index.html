@@ -1,0 +1,51 @@
+<!DOCTYPE html >
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="build/favicon.ico" />
+        <title>Teste MAN</title>
+        <link rel="stylesheet" href="../assets/css/styles.min.css">
+    </head>
+    <body ng-controller="appController">
+        <section class="titlepage">
+            <div class="titlepage__wrapper">
+                <div class="titlepage__inside">
+                    <div class="titlepage__block col-sm-12 col-xs-12">
+                        <h1><a href="/">Rapid Search <img src="build/logo.svg" alt="Logo Rapid Search"></span></a></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="formrepositorio__wrapper">
+            <div class="formrepositorio__inside">
+                <div class="formrepositorio__busca col-sm-12 col-xs-12">
+                    <!-- teste submit -->
+                    <div class="formrepositorio__block">
+                        <form ng-submit="buscaRepositorio()">
+                            <h2>Para localizar um repositório de uma organização/empresa, utilize o formulário abaixo:</h2>
+                            <fieldset>
+                                <div class="input-group">
+                                    <input type="text" ng-model="search.username" name="text" class="form-control" />
+                                    <span class="input-group-btn">
+                                        <input type="submit" id="submit" value="Buscar" class="btn btn-primary" />
+                                    </span>
+                                </div>
+                                <small class="text-muted">Exemplo: MongeralAegonDigital , adobe, Gulpjs, Google, globocom ...</small>
+                            </fieldset>
+                        </form>
+                        <div class="result-reposit">
+                            <ul id="list-repo">
+                                <li class="item-reposit" ng-repeat="item in reposit">
+                                    {{ item.name }}
+                                </li>
+                            </ul>
+                            <p>{{ msg.viewReturnError }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="../assets/js/angular.min.js"></script>
+        <script src="../assets/js/scripts.min.js"></script>
+    </body>
+</html>

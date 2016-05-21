@@ -1,19 +1,42 @@
-# Front-End: Trabalhe na MAD
+# Teste Front-End para trabalhar na MAD
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+Esta aplicação busca no GitHub listas de repositórios, de empresas e usuários, usando a API desse serviço. Basta o usuário digitar o nome da empresa/organização/usuário, e clicar em buscar.
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+Para o teste, foi usado AngularJS, Gulp, Sass, Bootstrap (apenas CSS, parte dele) e uma font bonita :).
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+Segue abaixo a listagem de tudo o que é necessário para rodar o app na versão de desenvolvimento.
 
-### Seria muito legal se:
+### Requisitos:
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
+* Node.js
+* NPM
+* Gulp (sudo npm install -g gulp)
 
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
+Instalar dependências do fontgen (pacote de conversão de fontes para Linux):
+"fontforge ttfautohint" e "ttf2eot ttf2svg" :
+```
+    sudo apt-get install  fontforge ttfautohint
+    sudo npm install -g  ttf2eot ttf2svg
+```
+Para iniciar o projeto, utilize o comando `npm install` para instalar as demais dependências abaixo:
+* angular
+* bootstrap
+* browser-sync
+* gulp
+* gulp-concat
+* gulp-fontgen
+* gulp-minify-css
+* gulp-ngmin
+* gulp-rename
+* gulp-sass
+* gulp-uglify
+* gulp-useref
+* ttf2woff2
+* useref
 
-Boa sorte!
+Para gerar nova versão de build, execute a task do Gulp `gulp build`
+(esta task minifica e concatena css, js e gera fontes apartir do formato .ttf ou .otf).
+
+Para rodar a versão de desenvolvimento, execute a task `gulp watch` que atualiza no navegador alterações feitas nos arquivos .scss.
+
+Dúvidas a respeito das tasks, consultar arquivos gulpfile.js.

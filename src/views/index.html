@@ -1,0 +1,87 @@
+<!DOCTYPE html >
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="src/favicon.ico" />
+        <title>Teste MAN</title>
+        <!--build:css ../assets/css/styles.min.css -->
+        <link rel="stylesheet" href="src/app/assets/css/styles.css" />
+        <!-- endbuild -->
+    </head>
+    <body ng-controller="appController">
+        <section class="titlepage">
+            <div class="titlepage__wrapper">
+                <div class="titlepage__inside">
+                    <div class="titlepage__block col-sm-12 col-xs-12">
+                        <h1><a href="/">Rapid Search <img src="src/logo.svg" alt="Logo Rapid Search" /></span></a></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="formrepositorio__wrapper">
+            <div class="formrepositorio__inside">
+                <div class="formrepositorio__title col-sm-12 col-xs-12">
+                    <h2>Para localizar um ou mais repositórios, utilize um dos formulários abaixo</h2>
+                </div>
+                <!-- lista de repositorios de empresas -->
+                <div class="formrepositorio__busca col-sm-6 col-xs-12">
+                    <!-- teste submit -->
+                    <div class="formrepositorio__block">
+                        <form ng-submit="buscaRepositorioEmpresas()">
+                            <h3>Nome da organização/empresa:</h3>
+                            <fieldset>
+                                <div class="input-group">
+                                    <input type="text" ng-model="search.orgname" name="text" class="form-control" />
+                                    <span class="input-group-btn">
+                                        <input type="submit" id="submit" value="Buscar" class="btn btn-primary" />
+                                    </span>
+                                </div>
+                                <small class="text-muted">Exemplo: MongeralAegonDigital , adobe, Gulpjs, Google, globocom ...</small>
+                            </fieldset>
+                        </form>
+                        <div class="result-reposit" ng-show="infoRepOrg.show">
+                            <ul id="list-repo">
+                                <li class="item-reposit" ng-repeat="item in reposit.listOrg">
+                                    {{ item.name }}
+                                </li>
+                            </ul>
+                            <p class="msg-erro">{{ msg.viewOrgError }}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- lista de repositorios de usuarios -->
+                <div class="formrepositorio__busca col-sm-6 col-xs-12">
+                    <!-- teste submit -->
+                    <div class="formrepositorio__block">
+                        <form ng-submit="buscaRepositorioUsuarios()">
+                            <h3>Nome do usuário:</h3>
+                            <fieldset>
+                                <div class="input-group">
+                                    <input type="text" ng-model="search.username" name="text" class="form-control" auto-complete ui-items="namesUsers" ng-model="selected" />
+                                    <span class="input-group-btn">
+                                        <input type="submit" id="submit" value="Buscar" class="btn btn-primary" />
+                                    </span>
+                                </div>
+                                <small class="text-muted">Exemplo: patriciaquintiere, luiz, jose ...</small>
+                            </fieldset>
+                        </form>
+                        <div class="result-reposit" ng-show="infoRepUser.show">
+                            <ul id="list-repo">
+                                <li class="item-reposit" ng-repeat="item in reposit.listUser">
+                                    {{ item.name }}
+                                </li>
+                            </ul>
+                            <p class="msg-erro">{{ msg.viewUserError }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--build:js ../assets/js/angular.min.js -->
+        <script src="../../node_modules/angular/angular.min.js"></script>
+        <!--endbuild-->
+        <!--build:js ../assets/js/scripts.min.js -->
+        <script src="src/app/assets/js/app.js"></script>
+        <!--endbuild-->
+    </body>
+</html>
