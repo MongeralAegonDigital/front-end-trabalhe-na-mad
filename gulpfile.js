@@ -13,41 +13,42 @@ var gulpIf = require('gulp-if');
 var minifyCss = require('gulp-minify-css');
 // fontgenerator
 var fontgen = require('gulp-fontgen');
-
+// "deploy" gh-pages in github
+var deploy = require('gulp-gh-pages');
 
 gulp.task('browserSync',function(){
     browserSync.init({
       server:{
-        baseDir: ["./","./src/views"],
-        index: "src/views/index.html"
+        baseDir: ["./","./src"],
+        index: "src/index.html"
       }
     });
 })
 
 // Converts Sass to CSS with gulp-sass
 gulp.task('sass', function(){
-  return gulp.src('src/app/assets/scss/*.scss')
+  return gulp.src('src/assets/scss/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('src/app/assets/css'))
+    .pipe(gulp.dest('src/assets/css'))
     .pipe(browserSync.reload({stream: true}))
 });
 
 // concat files and minify
 gulp.task('useref', function(){
-  return gulp.src('src/views/index.html')
-    .pipe(useref({searchPath: ['build', 'src', './']}))
+  return gulp.src('src/index.html')
+    .pipe(useref({searchPath: ['dist', 'src', './']}))
     // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', minifyCss()))
-    .pipe(gulp.dest('build/views'))
+    .pipe(gulp.dest('dist'))
 });
 
 
 // font generator
 gulp.task('fontgen',function() {
-  return gulp.src('src/app/assets/fonts/*.{ttf,otf}')
+  return gulp.src('src/assets/fonts/*.{ttf,otf}')
     .pipe(fontgen({
-        dest: 'src/app/assets/fonts'
+        dest: 'src/assets/fonts'
     }));
 });
 
@@ -55,9 +56,18 @@ gulp.task('fontgen',function() {
 ////browserSync
 ////sass
 gulp.task('watch', ['browserSync', 'sass'], function (){
-  gulp.watch('src/app/assets/scss/imports/*.scss',['sass']);
-  gulp.watch('src/app/assets/scss/*.scss',['sass']);
+  gulp.watch('src/assets/scss/imports/*.scss',['sass']);
+  gulp.watch('src/assets/scss/*.scss',['sass']);
 });
 
 // Minify Task
-gulp.task('build', ['useref','fontgen']);
+gulp.task('build', ['useref','fontgen'], function(){
+  gulp.src(['src/favicon.ico', 'src/logo.svg']).pipe(gulp.dest('dist'));
+  gulp.src('src/assets/fonts/*').pipe(gulp.dest('dist/assets/fonts'));
+});
+
+// Deploy to Git Pages
+gulp.task('deploy', function () {
+    return gulp.src('./dist/**/*')
+    .pipe(deploy());
+});

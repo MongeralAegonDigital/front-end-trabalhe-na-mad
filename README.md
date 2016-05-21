@@ -4,6 +4,9 @@ Esta aplicação busca no GitHub listas de repositórios, de empresas e usuário
 
 Para o teste, foi usado AngularJS, Gulp, Sass, Bootstrap (apenas CSS, parte dele) e uma font bonita :).
 
+O teste pode ser visualizado na url abaixo:
+http://patriciaquintiere.github.io/front-end-trabalhe-na-mad/
+
 Segue abaixo a listagem de tudo o que é necessário para rodar o app na versão de desenvolvimento.
 
 ### Requisitos:

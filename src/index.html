@@ -2,10 +2,10 @@
 <html ng-app="app">
     <head>
         <meta charset="utf-8" />
-        <link rel="shortcut icon" href="src/favicon.ico" />
+        <link rel="shortcut icon" href="favicon.ico" />
         <title>Teste MAN</title>
-        <!--build:css ../assets/css/styles.min.css -->
-        <link rel="stylesheet" href="src/app/assets/css/styles.css" />
+        <!--build:css assets/css/styles.min.css -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
         <!-- endbuild -->
     </head>
     <body ng-controller="appController">
@@ -13,7 +13,7 @@
             <div class="titlepage__wrapper">
                 <div class="titlepage__inside">
                     <div class="titlepage__block col-sm-12 col-xs-12">
-                        <h1><a href="/">Rapid Search <img src="src/logo.svg" alt="Logo Rapid Search" /></span></a></h1>
+                        <h1><a href="/">Rapid Search <img src="logo.svg" alt="Logo Rapid Search" /></a></h1>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                                         <ul>
                                             <li ng-show="{{ item.description === '' || item.description === null ? false : true }}"><span class="formrepositorio__info-legenda">Sobre: </span><p>{{ item.description }}</p></li>
                                             <li ng-show="{{ item.homepage === '' || item.homepage === null ? false : true }}"><span class="formrepositorio__info-home">Home Page: </span><a href="{{ item.homepage }}">{{ item.homepage }}</a></li>
-                                            <li ng-show="{{ item.forks === '' || item.forks === null ? false : true }}"><span class="formrepositorio__info-fork">Forks: </span><a href="{{ item.html_url }}/network/members">{{ item.forks }}</a></li>
+                                            <li ng-show="{{ item.forks === '' || item.forks === null || item.forks === 0 ? false : true }}"><span class="formrepositorio__info-fork">Forks: </span><a href="{{ item.html_url }}/network/members">{{ item.forks }}</a></li>
                                             <li><span class="formrepositorio__info-forkurl">Clone: </span><input type="text" class="clone" value="{{ item.clone_url }}" /></li>
                                         </ul>
                                     </div>
@@ -95,11 +95,11 @@
                 </div>
             </div>
         </section>
-        <!--build:js ../assets/js/angular.min.js -->
-        <script src="../../node_modules/angular/angular.min.js"></script>
+        <!--build:js assets/js/angular.min.js -->
+        <script src="../node_modules/angular/angular.min.js"></script>
         <!--endbuild-->
-        <!--build:js ../assets/js/scripts.min.js -->
-        <script src="src/app/assets/js/app.js"></script>
+        <!--build:js assets/js/scripts.min.js -->
+        <script src="src/assets/js/app.js"></script>
         <!--endbuild-->
     </body>
 </html>
