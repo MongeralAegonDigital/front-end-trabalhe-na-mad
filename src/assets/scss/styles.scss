@@ -1,0 +1,198 @@
+// variables
+@import "../../../node_modules/bootstrap/scss/_variables.scss";
+// variables
+@import 'imports/_variables';
+// mixins
+@import "../../../node_modules/bootstrap/scss/_mixins.scss";
+// reset
+@import "../../../node_modules/bootstrap/scss/_normalize.scss";
+// buttons
+@import "../../../node_modules/bootstrap/scss/_buttons.scss";
+// input group
+@import "../../../node_modules/bootstrap/scss/_input-group.scss";
+// forms
+@import "../../../node_modules/bootstrap/scss/_forms.scss";
+// grid
+@import "../../../node_modules/bootstrap/scss/_grid.scss";
+// reboot
+@import "../../../node_modules/bootstrap/scss/_reboot.scss";
+
+// fonts
+@import 'imports/_fonts.scss';
+
+/**
+* @section DEFAULT
+*/
+*{font-family: 'OfficinaSerifStd-Bold', sans-serif;}
+ul{list-style: none;}
+
+/**
+* @section GERAL
+*/
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+[class*="__wrapper"]{
+  @include make-container();
+  max-width: 960px;
+  margin: 0 auto;
+}
+[class*="__inside"]{
+  @include make-row();
+}
+[class*="col-"]{
+  @include make-col();
+  margin-bottom: 20px;
+}
+[class*="__block"]{
+    padding: 20px;
+}
+section{
+  h2{
+    text-align: center;
+  }
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+
+/**
+* @section LINK FOLLOW
+*/
+.linkfollow{
+    background: $gray;
+    border-radius: 10px 0 0 10px;
+    height: 60px;
+    line-height: 80px;
+    position: absolute;
+    top: calc(50% - 30px);
+    right: 0;
+    text-align: center;
+    width: 97px;
+    z-index: 4;
+}
+/**
+* @section TITULO
+*/
+section[class*="titlepage"]{
+    background: $blue;
+    a{
+        color: $white;
+        font-size: 56px;
+        position: relative;
+        text-decoration: none;
+
+        &:after{
+            content: "GitHub";
+            display: block;
+            position: absolute;
+            right: 26px;
+            font-size: 18px;
+            top: 100%;
+        }
+        img{
+            height: auto;
+            width: 100px;
+        }
+    }
+}
+
+/**
+* @subsection BLOCO
+*/
+h2{
+    margin: 30px 0;
+}
+.formrepositorio__inside{
+    align-items: stretch;
+
+    .formrepositorio__block{
+        background: $gray;
+    }
+    .result-reposit{
+        height: 320px;
+        background: $white;
+        overflow: auto;
+
+        > ul{
+            padding: 0 20px;
+
+            > li{
+                color: $blue;
+                margin: 10px 0;
+                text-transform: uppercase;
+
+                span:first-of-type{
+                    color: $black;
+                    width: 90px;
+                }
+                a, span, p{
+                    display: inline-block;
+                    vertical-align: top;
+                    word-wrap: break-word;
+                }
+                span + p{color: $black;}
+                span + p,
+                span + a{
+                    font-family: 'Verdana', sans-serif;
+                    font-size: 14px;
+                    margin: 0 5px 0 5px;
+                    width: 210px;
+                }
+                input{
+                    border: 1px solid $gray-dark;
+                    color: $black;
+                    height: 26px;
+                    padding: 5px;
+                    font-family: 'Verdana', sans-serif;
+                    font-size: 14px;
+                    overflow: hidden;
+                    width: 205px;
+                }
+                ul{
+                    padding: 10px 0 10px 10px;
+                    margin: 5px 0 30px 30px;
+                    border-radius: 5px;
+                    background: $gray;
+
+                    > li{
+                        text-transform: none;
+
+                        a{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .formrepositorio__msg-erro{
+            color: $red;
+            margin: 10px;
+        }
+    }
+}
+
+
+
+/**
+* @subsection FORM
+*/
+.text-muted{
+    color: $gray-dark;
+    font-weight: normal;
+}
+small{
+    display: block;
+    height: 60px;
+    padding: 10px;
+    width: 100%;
+}
+
+// responsive
+@import 'imports/_responsive';

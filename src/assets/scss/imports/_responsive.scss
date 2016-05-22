@@ -1,0 +1,37 @@
+// para colunas do formulario
+@media (max-device-width: 768px){
+    .col-xs-12 {
+        flex: 0 0 100%;
+    }
+    .linkfollow{top: 60px;}
+    section{
+        h2, h3, .form-control, input[type=submit]{font-size: 36px;}
+        small, .formrepositorio__msg-erro{
+            font-size: 30px;
+            line-height: 30px;
+            height: 90px;
+        }
+
+
+        .formrepositorio__inside{
+            .result-reposit{
+                > *{font-size: 32px;}
+                ul li.formrepositorio__item-reposit{
+                    font-size: 16px;
+                }
+                > ul > li ul > li > span {font-size: 32px;}
+                > ul > li ul > li > p {font-size: 26px;}
+
+                > ul > li ul > li > a,
+                > ul > li ul > li > input {font-size: 30px;}
+
+                > ul > li ul > li > span {width: 170px;}
+                > ul > li ul > li > p,
+                > ul > li ul > li > a,
+                > ul > li ul > li > input {width: calc(100% - 180px);}
+
+                > ul > li ul > li > input {height: 40px;}
+            }
+        }
+    }
+}
