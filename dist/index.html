@@ -5,24 +5,35 @@
         <link rel="shortcut icon" href="favicon.ico" />
         <title>Teste MAN</title>
         <link rel="stylesheet" href="assets/css/styles.min.css">
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
     </head>
     <body ng-controller="appController">
+        <!-- link follow -->
+        <div class="linkfollow">
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/patriciaquintiere/front-end-trabalhe-na-mad" data-style="mega" aria-label="Star patriciaquintiere/front-end-trabalhe-na-mad on GitHub">Star</a>
+        </div>
+        <!-- titulo pagina -->
         <section class="titlepage">
             <div class="titlepage__wrapper">
                 <div class="titlepage__inside">
-                    <div class="titlepage__block col-sm-12 col-xs-12">
+                    <div class="titlepage__block col-sm-12">
                         <h1><a href="/">Rapid Search <img src="logo.svg" alt="Logo Rapid Search" /></a></h1>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- formularios -->
         <section class="formrepositorio__wrapper">
             <div class="formrepositorio__inside">
-                <div class="formrepositorio__title col-sm-12 col-xs-12">
+                <div class="formrepositorio__title col-md-12 col-xs-12">
                     <h2>Para localizar um ou mais repositórios, utilize um dos formulários abaixo</h2>
                 </div>
+            </div>
+            <div class="formrepositorio__inside">
                 <!-- lista de repositorios de empresas -->
-                <div class="formrepositorio__busca col-sm-6 col-xs-12">
+                <div class="formrepositorio__busca col-md-6 col-xs-12">
                     <!-- teste submit -->
                     <div class="formrepositorio__block">
                         <form ng-submit="buscaRepositorioEmpresas()">
@@ -57,7 +68,7 @@
                     </div>
                 </div>
                 <!-- lista de repositorios de usuarios -->
-                <div class="formrepositorio__busca col-sm-6 col-xs-12">
+                <div class="formrepositorio__busca col-md-6 col-xs-12">
                     <!-- teste submit -->
                     <div class="formrepositorio__block">
                         <form ng-submit="buscaRepositorioUsuarios()">

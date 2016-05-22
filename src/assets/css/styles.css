@@ -1858,7 +1858,8 @@ h1 {
   position: relative;
   min-height: 1px;
   padding-left: 0.9375rem;
-  padding-right: 0.9375rem; }
+  padding-right: 0.9375rem;
+  margin-bottom: 20px; }
 
 [class*="__block"] {
   padding: 20px; }
@@ -1870,6 +1871,21 @@ section:after {
   display: table;
   content: " ";
   clear: both; }
+
+/**
+* @section LINK FOLLOW
+*/
+.linkfollow {
+  background: #F8F6FD;
+  border-radius: 10px 0 0 10px;
+  height: 60px;
+  line-height: 80px;
+  position: absolute;
+  top: calc(50% - 30px);
+  right: 0;
+  text-align: center;
+  width: 97px;
+  z-index: 4; }
 
 /**
 * @section TITULO
@@ -1930,7 +1946,7 @@ h2 {
         .formrepositorio__inside .result-reposit > ul > li input {
           border: 1px solid #999;
           color: #000;
-          height: 20px;
+          height: 26px;
           padding: 5px;
           font-family: 'Verdana', sans-serif;
           font-size: 14px;
@@ -1961,3 +1977,34 @@ small {
   height: 60px;
   padding: 10px;
   width: 100%; }
+
+@media (max-device-width: 768px) {
+  .col-xs-12 {
+    flex: 0 0 100%; }
+  .linkfollow {
+    top: 60px; }
+  section h2, section h3, section .form-control, section input[type=submit] {
+    font-size: 36px; }
+  section small, section .formrepositorio__msg-erro {
+    font-size: 30px;
+    line-height: 30px;
+    height: 90px; }
+  section .formrepositorio__inside .result-reposit > * {
+    font-size: 32px; }
+  section .formrepositorio__inside .result-reposit ul li.formrepositorio__item-reposit {
+    font-size: 16px; }
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > span {
+    font-size: 32px; }
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > p {
+    font-size: 26px; }
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > a,
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > input {
+    font-size: 30px; }
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > span {
+    width: 170px; }
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > p,
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > a,
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > input {
+    width: calc(100% - 180px); }
+  section .formrepositorio__inside .result-reposit > ul > li ul > li > input {
+    height: 40px; } }

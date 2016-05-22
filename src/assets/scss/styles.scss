@@ -1,13 +1,15 @@
-// reset
-@import "../../../node_modules/bootstrap/scss/_normalize.scss";
 // variables
 @import "../../../node_modules/bootstrap/scss/_variables.scss";
+// variables
+@import 'imports/_variables';
 // mixins
 @import "../../../node_modules/bootstrap/scss/_mixins.scss";
+// reset
+@import "../../../node_modules/bootstrap/scss/_normalize.scss";
 // buttons
 @import "../../../node_modules/bootstrap/scss/_buttons.scss";
 // input group
-@import "../../../node_modules/bootstrap/scss/input-group.scss";
+@import "../../../node_modules/bootstrap/scss/_input-group.scss";
 // forms
 @import "../../../node_modules/bootstrap/scss/_forms.scss";
 // grid
@@ -15,10 +17,6 @@
 // reboot
 @import "../../../node_modules/bootstrap/scss/_reboot.scss";
 
-// variables
-@import 'imports/_variables';
-// responsive
-@import 'imports/_responsive';
 // fonts
 @import 'imports/_fonts.scss';
 
@@ -46,6 +44,7 @@ h1{
 }
 [class*="col-"]{
   @include make-col();
+  margin-bottom: 20px;
 }
 [class*="__block"]{
     padding: 20px;
@@ -61,7 +60,21 @@ section{
   }
 }
 
-
+/**
+* @section LINK FOLLOW
+*/
+.linkfollow{
+    background: $gray;
+    border-radius: 10px 0 0 10px;
+    height: 60px;
+    line-height: 80px;
+    position: absolute;
+    top: calc(50% - 30px);
+    right: 0;
+    text-align: center;
+    width: 97px;
+    z-index: 4;
+}
 /**
 * @section TITULO
 */
@@ -133,7 +146,7 @@ h2{
                 input{
                     border: 1px solid $gray-dark;
                     color: $black;
-                    height: 20px;
+                    height: 26px;
                     padding: 5px;
                     font-family: 'Verdana', sans-serif;
                     font-size: 14px;
@@ -180,3 +193,6 @@ small{
     padding: 10px;
     width: 100%;
 }
+
+// responsive
+@import 'imports/_responsive';
