@@ -1,0 +1,52 @@
+@import "normalize";
+@import "colors";
+
+.main-container {
+  display: block;
+  width: 450px;
+  margin: 0 auto;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 3em;
+}
+
+.main-input-search {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: solid 1px $clrprimary;
+  outline: 0;
+}
+
+.repository-list {
+  padding: 0;
+  list-style: none;
+
+  & > .item {
+    border-bottom: solid 1px $clrprimary;
+    padding: 5px;
+
+    &:hover {
+      background-color: $clrlisthover;
+    }
+    &:active {
+      background-color: $clrlistclick;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .name {
+    font-size: 1.5em;
+    margin: 5px 0;
+  }
+
+  .stars {
+    float: right;
+  }
+
+}
