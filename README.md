@@ -1,19 +1,17 @@
-# Front-End: Trabalhe na MAD
+# GitHub Repository Search
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+Busca de repositórios utilizando a API do GitHub
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+### Instalação
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+Certifique-se de ter instalado o Bower e o Gulp globalmente:
 
-### Seria muito legal se:
+`npm install -g gulp bower`
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
+Depois clone o projeto localmente e instale as dependencias:
 
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
+`git clone git@github.com:brunoravanhani/front-end-trabalhe-na-mad.git`
+`cd front-end-trabalhe-na-mad`
 
-Boa sorte!
+`npm install`
+`bower install`
