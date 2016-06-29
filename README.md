@@ -11,7 +11,9 @@ Certifique-se de ter instalado o Bower e o Gulp globalmente:
 Depois clone o projeto localmente e instale as dependencias:
 
 `git clone git@github.com:brunoravanhani/front-end-trabalhe-na-mad.git`
+
 `cd front-end-trabalhe-na-mad`
 
 `npm install`
+
 `bower install`

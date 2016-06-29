@@ -10,7 +10,7 @@
 
     <main class="main-container" ng-controller="MainCtrl">
       <h1 class="main-title">GitHub Repository Search</h1>
-      <input class="main-input-search" type="text" placeholder="Type your repository here" ng-model="searchInput" ng-keypress="search($event)">
+      <input class="main-input-search" type="text" placeholder="Type your repository and press 'Enter' " ng-model="searchInput" ng-keypress="search($event)">
       <ul class="repository-list">
         <li class="item" ng-repeat="repo in results">
           <p class="name">{{repo.name}}</p>
