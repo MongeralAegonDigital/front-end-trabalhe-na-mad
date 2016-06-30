@@ -1,0 +1,25 @@
+{
+  "name": "mongeral",
+  "version": "0.0.0",
+  "authors": [
+    "Michel Ribeiro <michelribeiro2004@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "angular": "^1.5.7"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <meta charset="utf-8">
+        <title>Mongeral Aegon</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/angular.min.js" type="text/javascript"></script>
+        <script src="js/apis-angular.js" type="text/javascript"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body ng-controller="listCtrl">
+        <div class="container">
+            <div class="row">
+                <h1>Consulta GIT</h1>
+                <form class="form-inline">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="nameUser">
+                                Nome do usuário do Git:
+                            </label>
+                            <input type="text" class="form-control" name="nameUser" ng-model="userName">
+                            <input type="button" class="btn btn-primary" value="OK" ng-click="listar()">
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="errorMessage bg-danger" ng-if="!encontrado">
+                        <h2 class="text-danger">Não encontramos o usuário <span ng-bind="userName"></span>!</h2>
+                    </div>
+                    <h3 ng-if="repositorio">Repositórios:</h3>
+                    <ul>
+                        <li ng-repeat="listas in list">
+                            {{listas.name}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
