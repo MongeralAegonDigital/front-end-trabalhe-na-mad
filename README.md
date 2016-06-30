@@ -6,12 +6,13 @@
 *  Task runner Grunt (Automação de processos).
 *  Framework AngularJs.
 
-###  Tasks usadas ###
+###  Como rodar o projeto ###
 
-*  Baixar o projeto.
-*  npm install.
-*  bower install.
+*  Rodar no terminal - npm install.
+*  Rodar no terminal - bower install.
+*  Quando todas as dependências estiverem instaladas rodar o grunt no terminal.
 
+##  Contatos
 
 *  Michel Ribeiro (michelribeiro2004@gmail.com)
 *  21 97904-4440
