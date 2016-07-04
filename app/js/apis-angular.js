@@ -9,8 +9,8 @@ app.controller("listCtrl", ['$scope', '$http', function($scope, $http) {
 
         $http.get('https://api.github.com/users/'+$scope.userName+'/repos').success(function(data) {
             $scope.list = data;
-            $scope.encontrado = true;
-            $scope.repositorio = true;
+            $scope.encontrado = data.length > 0;
+            $scope.repositorio = data.length > 0;
 
         }).error(function(data) {
             $scope.encontrado = false;
