@@ -1,0 +1,29 @@
+{
+  "name": "Front End Test",
+  "version": "1.0.0",
+  "description": "Teste para a vaga de Front End da Mongeral Aegon",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "Front",
+    "End",
+    "Test"
+  ],
+  "authors": [
+    "Paulo Sérgio Galdino Sacramento"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "angular": "~1.4.7"
+  }
+}
