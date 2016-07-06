@@ -1,0 +1,74 @@
+.nav {
+  min-height: 100vh;
+  background-color: $blue;
+  margin-left: -100%;
+  position: absolute;
+  width: 100%;
+  transition: margin-left .3s ease-in-out;
+  z-index: 1000;
+  &.active {
+    margin-left: 0;
+  }
+  .list-projects {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    &__header {
+      padding: 10px;
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      font-size: 18px;
+      font-weight: 600;
+    }
+    &__item {
+      a {
+        display: block;
+        width: 100%;
+        padding: 8px 100px 8px 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $light-blue;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        i {
+          margin-right: 5px;
+          font-size: 16px;
+        }
+        .name {
+          word-wrap: break-word;
+          padding: 0;
+          margin: 0;
+          display: inline-block;
+        }
+        .stars {
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          i {
+            color: $yellow;
+          }
+        }
+        &:hover {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      &.active {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    flex-grow: 1;
+    width: 450px;
+    position: relative;
+    margin-left: 0;
+  }
+}

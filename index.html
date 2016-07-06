@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="VMLTest">
+<head>
+    <meta charset="UTF-8">
+    <title>Globo.Com | Projetos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<aside class="nav active" ng-controller="projectsCtrl as vm">
+    <ul class="list-projects">
+        <li class="list-projects__header">
+            Projetos
+        </li>
+        <li class="list-projects__item" id="{{project.name}}" ng-repeat="project in vm.list_projects">
+            <a ng-href="#/{{project.name}}">
+                <i class="icon-folder"></i>
+                <p class="name" ng-bind="project.name"></p>
+                <span class="stars">
+                    <i class="icon-star"></i>
+                    <span class="count" ng-bind="project.stargazers_count"></span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</aside>
+
+<div class="main">
+    <div ng-view></div>
+</div>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>

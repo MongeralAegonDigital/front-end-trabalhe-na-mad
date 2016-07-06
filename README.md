@@ -1,19 +1,17 @@
-# Front-End: Trabalhe na MAD
+### O que foi usado ###
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+*  Pré processador SASS.
+*  Task runner GulpJs.
+*  Framework AngularJs.
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+###  Como rodar o projeto ###
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+*  Rodar no terminal - npm install.
+*  Rodar no terminal - bower install.
+*  Quando todas as dependências estiverem instaladas rodar o gulp no terminal.
 
-### Seria muito legal se:
+##  Contatos
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
-
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
-
-Boa sorte!
+* João Carvalho (oi@joaocarvalhowd.com.br)
+* Tel: 33 99130-5008
+* Skype: joaocarvalhowd
