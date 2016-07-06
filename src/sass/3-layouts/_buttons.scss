@@ -1,0 +1,16 @@
+.btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  &.btn-gray {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    color: #757575;
+    &:hover, &:focus{
+      border: 1px solid #c6c6c6;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+      color: #222;
+    }
+  }
+}

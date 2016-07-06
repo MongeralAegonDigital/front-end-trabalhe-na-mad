@@ -1,0 +1,29 @@
+<header>
+    <a ng-href="#/" class="return">
+        <i class="icon-close"></i>
+    </a>
+    <span class="name-project" ng-bind="'Projeto: ' + vm.project_details.name"></span>
+</header>
+<ul class="counts">
+    <li class="counts__item">
+        <span class="count" ng-bind="vm.project_details.stargazers_count"></span>
+        <span class="text">Stars</span>
+    </li>
+    <li class="counts__item">
+        <span class="count" ng-bind="vm.project_details.forks"></span>
+        <span class="text">Forks</span>
+    </li>
+</ul>
+<ul class="list_commits">
+    <li class="list_commits__item" ng-repeat="item in vm.commits">
+        <span class="message" ng-bind="item.commit.message"></span>
+        <div class="autor-section">
+            <span class="name" ng-bind="item.commit.author.name"></span>
+            <i class="icon-clock"></i>
+            <span class="date">{{item.commit.author.date | date : 'dd/MM/yyyy'}}</span>
+        </div>
+    </li>
+</ul>
+<div class="load-more" ng-if="vm.current_page != vm.total_pages">
+    <button class="btn btn-gray" ng-click="vm.loadMore()">Carregar Mais...</button>
+</div>
