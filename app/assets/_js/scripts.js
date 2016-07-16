@@ -63,8 +63,10 @@ function criaTable(dataset) {
 }
 function valida() {
     var nome = document.getElementById("nome").value.toString();
-    if (nome !== null) {
+    if (nome.length !== 0) {
         document.getElementById("envio").disabled = false;
+    }else{
+        document.getElementById("envio").disabled = true;
     }
     document.getElementById("nome").value = nome.replace(/\s+/g, "");
 
