@@ -1,0 +1,130 @@
+/* 
+    Created on : 14/07/2016, 22:40:41
+    Author     : André
+*/
+
+
+$fColor:#64849c;
+$wide:100%;
+$bshadow:0px 0px 3px 0px rgba(104,104,104,0.4);
+
+@mixin box-shadow($shadow){
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin align-center($position) {
+    position:$position;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+@mixin transition($properties){
+    -webkit-transition: $properties;
+    -moz-transition: $properties;
+    -ms-transition: $properties;
+    -o-transition: $properties;
+    transition: $properties;
+}
+
+
+/*Fim Gerais*/
+
+body{
+    margin:0;
+    background-color:#ecf1f7;
+    font-family:'Arial';
+    color:$fColor;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+/*Fim Gerais*/
+/*Topo*/
+.top{
+    width: $wide;
+    color: $fColor;
+    background-color:#fff;
+    @include box-shadow($bshadow);
+    img{
+        padding: 20px;
+    }
+    .titulo{
+        font-size:22px;
+        padding: 22px 0;
+        .desnvolvedor{
+            font-size:18px;
+        }
+    }
+
+}
+/*Fim Topo*/
+/*Corpo*/
+.box{
+    @include border-radius(3px);
+    width:1024px;
+    margin:30px 0;
+    background-color:#fff;
+    @include box-shadow($bshadow);
+    @include align-center(relative);
+    .inner{
+        padding:10px;
+    }
+    .titulo{
+        color:#007bc7;
+        font-size:22px;
+        padding:10px;
+        border-bottom:1px solid #007bc7;
+    }
+    label,input,button{
+        margin:5px 0;
+    }
+    label,button{
+        display:block;
+    }
+    .search{
+        input{
+            display:inline-block;
+            @include border-radius(3px);
+            border:1px solid #a9a9a9;
+            width:450px;
+            padding:10px;
+            color:$fColor;
+        }
+        img{
+            display:none;
+            margin: 0 10px;
+            position: relative;
+            top: 10px;
+        }
+    }
+    button{
+        padding:10px 20px;
+        cursor:pointer;
+    }
+    table{
+        border:1px solid #d8d8d8;
+        @include box-shadow((0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2)));
+    }
+}
+#resultados{
+    display:none;
+    top:-100px;
+    opacity:0;
+    @include transition(all 0.5s);
+}
+/*Fim Corpo*/
+

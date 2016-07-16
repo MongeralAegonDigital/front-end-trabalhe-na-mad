@@ -1,0 +1,12 @@
+{
+  "name": "Front-EndTeste",
+  "version": "1.0.0",
+  "title": "Teste para a vaga de Front-End",
+  "homepage": "http://divulgacaoandre.esy.es/mongeralAegon/app",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
