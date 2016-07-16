@@ -1,0 +1,16 @@
+{
+    "name": "Front-End Teste",
+    "description": "Teste para a vaga de Front-End",
+    "authors": [
+        {
+            "name": "André Moreira",
+            "email": "andre.lom19@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.8",
+		"knplabs/github-api": "~1.4"
+		
+    }
+	
+}

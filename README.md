@@ -1,19 +1,18 @@
-# Front-End: Trabalhe na MAD
+# Teste para Front-End
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+Aplicação para o teste de Front-End, desenvolvedor: André Moreira.
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+A aplicação usa a api do GitHub para php(KnpLabs/php-github-api), para retornar uma lista de repositórios com o id, o nome, e a url do repositório de um usuário qualquer.
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+## Tecnologias Usadas
+* GitHub Api para PHP(KnpLabs/php-github-api);
+* Sass;
+* Grunt;
+* Composer.json;
+* Angular;
+* Javascript e JQuery;
+* DataTables(para apresentar melhor as tabelas com as informações);
 
-### Seria muito legal se:
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
-
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
-
-Boa sorte!
+link para a app: http://divulgacaoandre.esy.es/mongeralAegon/app (Os direitos autorais da logo usada pertencem a Mongeral Aegon)
+link original do git https://github.com/alom2/Front-End
