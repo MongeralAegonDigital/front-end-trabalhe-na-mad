@@ -1,0 +1,66 @@
+.custom-tab{
+    border-style: solid;
+    border-right: 1px solid #ddd !important;
+    border-left: 1px solid #ddd !important;
+    border-bottom: 1px solid #ddd !important;
+    border: 0px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0px 0px 4px 4px;
+    margin-bottom: 20px;
+}
+
+.footer{
+    padding: 20px 20px 20px 20px;
+    background: #eee;
+    border-radius: 4px 4px 4px 4px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 20px 20px 20px 20px;
+}
+
+.search{
+    margin-bottom: 20px;
+}
+
+.hiddenpanel{
+    opacity: 0;
+    width: 0%;
+}
+
+
+.panel > .custom-heading {
+    background-image: none;
+    background-color: #fff !important;
+}
+
+.tab-animation > .tab-content {
+	position: relative;
+}
+
+.tab-animation > .tab-content > .tab-pane{
+	transition: 0.2s linear opacity;
+}
+
+.tab-animation > .tab-content > .tab-pane.active-remove {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	display: block;
+}
+
+.tab-animation > .tab-content > .tab-pane.active-remove-active {
+	opacity: 0;
+}
+
+.tab-animation > .tab-content > .tab-pane.active-add {
+	opacity: 0;
+}
+
+.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
