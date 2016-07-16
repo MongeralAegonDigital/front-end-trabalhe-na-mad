@@ -1,0 +1,31 @@
+{
+  "fullName": "Startr",
+  "name": "startr",
+  "description": "Tema personalizado desenvolvido por Refs Tecnologia.",
+  "version": "0.0.1",
+  "author": "42Layers <contact@42layers.com>",
+  "homepage": "http://42layers.com",
+  "repository": {
+    "type": "svn",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-bumper": "^1.0.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.5.2",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-imagemin": "^0.8.1",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-prompt": "^1.1.0",
+    "grunt-rewrite": "^1.0.1",
+    "grunt-wp-version": "~0.1.0"
+  }
+}
