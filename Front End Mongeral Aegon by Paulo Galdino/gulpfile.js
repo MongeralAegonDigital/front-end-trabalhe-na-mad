@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     del = require('del');
 
+
 gulp.task('jshint', function() {
   return gulp.src('./app/scripts/**/*.js')
   .pipe(jshint())
