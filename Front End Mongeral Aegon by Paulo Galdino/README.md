@@ -12,6 +12,7 @@
 	bower install
 	
 	
+	
 3 - instalar o gulp localmente:
 
 	npm install gulp --save-dev
