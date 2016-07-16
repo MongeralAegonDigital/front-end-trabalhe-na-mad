@@ -1,19 +1,29 @@
-# Front-End: Trabalhe na MAD
+1 - Baixe os arquivos do projeto e descompacte-os em uma pasta de sua prefer�ncia.
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+2 - Instale o bower usando o comando abaixo:
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+npm install -g bower
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+3 - instale o gulp com o comando abaixo:
 
-### Seria muito legal se:
+npm install -g gulp 
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
+4 - Na linha de comando, mova-se para o diret�rio onde foi descompactado o projeto.
 
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
+5 - instale as depend�ncias do projeto com o comando:
 
-Boa sorte!
+bower install
+
+6 - instale o gulp localmente:
+
+npm install gulp --save-dev
+
+7 - instale os plugins do gulp necess�rios a instala��o:
+
+npm install jshint gulp-jshint jshint-stylish gulp-imagemin gulp-concat gulp-uglify gulp-minify-css gulp-usemin gulp-cache gulp-changed gulp-rev gulp-rename gulp-notify  browser-sync del --save-dev
+
+8 - Execute o gulp para instalar o projeto:
+
+gulp
+
+9 - A instala��o foi feita na past "dist" do diret�rio do projeto

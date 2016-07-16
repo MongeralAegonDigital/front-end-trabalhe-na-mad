@@ -1,0 +1,101 @@
+<div class="container" ng-controller="GitController">
+        <div class="row search">
+            <div class="col-md-12">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" ng-model="user" placeholder="Digite seu usuário github">
+                    <span class="input-group-btn" id="sizing-addon1">
+                        <div class="btn btn-default" ng-click="submit(user)">Buscar</div>
+                    </span>
+                </div>
+            </div>
+        </div>    
+        <div class="row hiddenpanel">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                      <li ng-class="{active:isSelected(1)}"><a ng-click="setSelected(1)" href="#">Usuário</a></li>
+                      <li ng-class="{active:isSelected(2)}"><a ng-click="setSelected(2)" href="#">Repositórios</a></li>
+                      <li ng-class="{active:isSelected(3)}"><a ng-click="setSelected(3)" href="#">Seguindo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row custom-tab hiddenpanel">
+            <div class="col-md-12 tab-animation">
+                <div class="tab-content">
+                    <!-- tab 1 -->
+                    <div class="tab-pane" class="tab-pane " ng-class="{'fade in active':isSelected(1)}">
+                        <div class="panel panel-default" ng-repeat="user in user_info">
+                            <div class="panel-heading">{{user.name}}</div>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                        <img class="media-object"
+                                            ng-src={{user.avatar_url}} alt="{{user.name}}" width="84px" height="84px">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <p><b>blog:</b> <a ng-src={{user_info.blog}}>{{user.blog}}</a></p>
+                                            <p><b>Criado em: </b>{{user.created_at}}</p>
+                                            <p><b>Subscrive: </b><a ng-src={{user_info.email}}>{{user.email}}</a></p>
+                                        </div>    
+
+                                    </div>
+                                </li>
+                            </ul> 
+                        </div>    
+                    </div>  
+                    
+                    <!-- tab 2 -->
+                    <div class="tab-pane" ng-class="{'fade in active':isSelected(2)}">
+                        <div class="panel panel-default" ng-repeat="repo in user_repo">
+                            <div class="panel-heading">{{repo.name}}</div>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                        <img class="media-object"
+                                            ng-src={{repo.owner.avatar_url}} alt="{{repo.name}}" width="84px" height="84px">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <p><b>URL:</b> <a ng-src={{repo.url}}>{{repo.url}}</a></p>
+                                            <p><b>Criado em: </b>{{repo.created_at}}</p>
+                                            <p><b>Linguagem: </b><a ng-src={{repo.language}}>{{repo.language}}</a></p>
+                                        </div>    
+
+                                    </div>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div> 
+                    
+                    <!-- tab 3 -->
+                    <div class="tab-pane" class="tab-pane " ng-class="{'fade in active':isSelected(3)}">
+                        <div class="panel panel-default" ng-repeat="follow in user_follow">
+                            <div class="panel-heading">{{follow.login}}</div>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                        <img class="media-object"
+                                            ng-src={{follow.avatar_url}} alt="{{follow.loggin}}" width="84px" height="84px">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <p><b>URL:</b> <a ng-src={{follow.html_url}}>{{follow.html_url}}</a></p>
+                                            <p><b>Tipo: </b>{{follow.type}}</p>
+                                            <p><b>Sobrescrever: </b><a ng-src={{follow.subscriptions_url}}>{{follow.subscriptions_url}}</a></p>
+                                        </div>    
+
+                                    </div>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+</div>
