@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front End Test</title>
+    <!-- Bootstrap -->
+    <!-- link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" -->
+    <link href="css/all.min.css" rel="stylesheet">
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="AppTest">
+
+    <div class="container" ng-controller="gitController as gitCTRL">
+        <div class="row">
+            <div class="col-md-12">
+                <input type="text" ng-model="gitCTRL.user" placeholder="Digite seu usuário github">
+                <div class="btn btn-default" ng-click="gitCTRL.submit(gitCTRL.user)">Buscar</div>
+            </div>
+        </div>    
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs">
+                      <li ng-class="{active:gitCTRL.isSelected(1)}"><a ng-click="gitCTRL.setSelected(1)" href="#">Usuário</a></li>
+                      <li ng-class="{active:gitCTRL.isSelected(2)}"><a ng-click="gitCTRL.setSelected(2)" href="#">Repositórios</a></li>
+                      <li ng-class="{active:gitCTRL.isSelected(3)}"><a ng-click="gitCTRL.setSelected(3)" href="#">Seguindo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab-content">
+                    <!-- tab 1 -->
+                    <div class="tab-pane" class="tab-pane " ng-class="{'fade in active':gitCTRL.isSelected(1)}">
+                        <div class="panel panel-primary" ng-repeat="user in gitCTRL.user_info">
+                            <div class="panel-heading">{{user.name}}</div>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                        <img class="media-object"
+                                            ng-src={{user.avatar_url}} alt="{{user.name}}" width="84px" height="84px">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <p><b>blog:</b> <a ng-src={{gitCTRL.user_info.blog}}>{{user.blog}}</a></p>
+                                            <p><b>Criado em: </b>{{user.created_at}}</p>
+                                            <p><b>Subscrive: </b><a ng-src={{gitCTRL.user_info.email}}>{{user.email}}</a></p>
+                                        </div>    
+
+                                    </div>
+                                </li>
+                            </ul> 
+                        </div>    
+                    </div>  
+                    
+                    <!-- tab 2 -->
+                    <div class="tab-pane" ng-class="{'fade in active':gitCTRL.isSelected(2)}">
+                        <div class="panel panel-primary" ng-repeat="repo in gitCTRL.user_repo">
+                            <div class="panel-heading">{{repo.name}}</div>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                        <img class="media-object"
+                                            ng-src={{repo.owner.avatar_url}} alt="{{repo.name}}" width="84px" height="84px">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <p><b>URL:</b> <a ng-src={{repo.url}}>{{repo.url}}</a></p>
+                                            <p><b>Criado em: </b>{{repo.created_at}}</p>
+                                            <p><b>Linguagem: </b><a ng-src={{repo.language}}>{{repo.language}}</a></p>
+                                        </div>    
+
+                                    </div>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div> 
+                    
+                    <!-- tab 3 -->
+                    <div class="tab-pane" class="tab-pane " ng-class="{'fade in active':gitCTRL.isSelected(3)}">
+                        <div class="panel panel-primary" ng-repeat="follow in gitCTRL.user_follow">
+                            <div class="panel-heading">{{follow.login}}</div>
+                            <ul class="media-list">
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                        <img class="media-object"
+                                            ng-src={{follow.avatar_url}} alt="{{follow.loggin}}" width="84px" height="84px">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                            <p><b>URL:</b> <a ng-src={{follow.html_url}}>{{follow.html_url}}</a></p>
+                                            <p><b>Tipo: </b>{{follow.type}}</p>
+                                            <p><b>Sobrescrever: </b><a ng-src={{follow.subscriptions_url}}>{{follow.subscriptions_url}}</a></p>
+                                        </div>    
+
+                                    </div>
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- script src="../bower_components/jquery/dist/jquery.min.js"></script -->
+    <!-- script src="../bower_components/angular/angular.min.js"></script -->
+    <!-- script src="scripts/app.js"></script -->
+    <script src="js/all.min.js"></script>
+
+</body>
+
+</html>
