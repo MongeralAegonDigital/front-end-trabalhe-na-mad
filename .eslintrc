@@ -1,0 +1,13 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "quotes": [2, "single"]
+  }
+}
