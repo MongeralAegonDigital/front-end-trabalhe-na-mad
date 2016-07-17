@@ -4,10 +4,10 @@ This project uses React and Babel to consume the github API and show an specifie
 
 ## Get the files
 
-Clone this repos.
+Clone this repo.
 
 ```
-$ git clone git@github.com:lucantini/MAD-Project.git && cd MAD-Project
+$ git clone git@github.com:lucantini/MAD-Project.git
 ```
 
 ## Installation
