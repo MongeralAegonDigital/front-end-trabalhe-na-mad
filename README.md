@@ -1,12 +1,17 @@
 # Front-End Developer at Mongeral Aegon
 
-Listing a user repositories on github 
+Listing user repositories on GitHub 
 
 ### How to run
 
 You should run on node 4.4.x
 
-Watch:
+Install:
+```bash
+$ npm install
+```
+
+Run / Watch:
 ```bash
 $ gulp
 ```
