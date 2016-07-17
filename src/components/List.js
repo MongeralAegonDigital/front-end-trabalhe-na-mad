@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Row, Col, Input,ListGroup, ListGroupItem} from 'react-bootstrap';
 
 const List = ({items}) =>
     <div className="list">

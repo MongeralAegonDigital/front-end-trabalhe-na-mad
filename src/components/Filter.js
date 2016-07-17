@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormControl, FormGroup, ControlLabel } from 'react-bootstrap';
+import { FormControl, FormGroup, Row, Col } from 'react-bootstrap';
 
 export default class Filter extends Component {
   constructor(props) {
@@ -12,32 +12,35 @@ export default class Filter extends Component {
 
   handleChange(e) {
     e.preventDefault();
-    console.log('form-data', this);
-    this.setState({ value: e.target.value });
+
+    const ownerName = document.getElementById('repositoryOwner').value;
+    this.setState({ value: ownerName });
 
     if (typeof this.props.onFilter === 'function') {
-      this.props.onFilter(e.target.value);
+      this.props.onFilter(ownerName);
     }
   }
 
   render() {
-    const { title } = this.props;
-
     return (
       <form onSubmit={this.handleChange.bind(this)}>
-        <FormGroup controlId="formBasicText" bsSize="lg">
-          <ControlLabel>{title}</ControlLabel>
-          <FormControl
-            type="text"
-            value={this.state.value}
-            placeholder="Enter the repository owner name you want to find"
-          />
-          <FormControl
-            type="submit"
-            value="Find"
-            className="btn btn-primary"
-          />
-        </FormGroup>
+        <Row>
+          <Col xs={8}>
+            <FormGroup bsSize="large">
+              <FormControl id="repositoryOwner" type="text" placeholder="Large text" placeholder="Enter the repositories owner name you want to find"/>
+            </FormGroup>
+          </Col>
+
+          <Col xs={4}>
+            <FormGroup bsSize="lg">
+              <FormControl
+                type="submit"
+                value="Find"
+                className="btn btn-primary"
+              />
+            </FormGroup>
+          </Col>
+        </Row>
       </form>
     );
   }

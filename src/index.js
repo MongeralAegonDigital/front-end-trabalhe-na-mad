@@ -14,7 +14,7 @@ class App extends Component {
 
     this.state = {
       repositories: this.props.data || {},
-      filterValue: 'octokit'
+      filterValue: ''
     };
   }
 
@@ -22,12 +22,20 @@ class App extends Component {
     this.setState({
       filterValue: value
     });
+    this.getRepositories(value);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const filterValue = this.state.filterValue;
 
-    $.get('https://api.github.com/orgs/' + filterValue + '/repos').done(function(data) {
+    if (this.state.filterValue) {
+      this.getRepositories(filterValue);
+    }
+
+  }
+
+  getRepositories(user) {
+    $.get('https://api.github.com/users/' + user + '/repos').done(function(data) {
       this.setState({repositories: data});
     }.bind(this));
   }
@@ -36,7 +44,8 @@ class App extends Component {
     if (this.state.repositories) {
       return (
         <Grid>
-          <h2>{this.state.filterValue}'s repositories list</h2>
+          <h1>GitHub - User Repositories List</h1>
+          <Filter onFilter={this.onFilter.bind(this)} />
           <List items={this.state.repositories} />
         </Grid>
       )
