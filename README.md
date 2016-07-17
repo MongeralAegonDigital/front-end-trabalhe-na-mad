@@ -1,19 +1,37 @@
-# Front-End: Trabalhe na MAD
+# MAD-Project
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+This project uses React and Babel to consume the github API and show an specified User avatar, link to github and email information. we also use Gulp as the task runner. These are all pretty new technologies to me, so it might have a few slips here and there :)
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+## Get the files
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+Clone this repo.
 
-### Seria muito legal se:
+```
+$ git clone git@github.com:lucantini/MAD-Project.git
+```
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
+## Installation
 
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
+Install all dependencies.
 
-Boa sorte!
+```
+$ npm install
+```
+
+## Development
+
+Builds the application and starts a webserver with livereload. By default the webserver starts at port 1337.
+Just run:
+
+```
+$ gulp
+```
+
+## CSS
+
+I've used [Bootstrap](http://getbootstrap.com/) for the CSS.
+
+###Requirements
+* node
+* npm
+* gulp
