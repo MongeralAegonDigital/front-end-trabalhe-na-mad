@@ -1,0 +1,15 @@
+<section class="main-section">
+    <input class="search-input" ng-model="searchValue" placeholder="Procurar membros por login">
+    <br>
+    <article class="results" style="text-align: center">
+        <span ng-show="searchValue">Resultados para: <h3>{{ searchValue }}</h3></span>
+        <ul ng-repeat="member in data | filter:searchValue">
+            <a href="{{member.html_url}}">
+                <li class="member-info">
+                    <img class="member-avatar" src="{{member.avatar_url}}"/><br>
+                    <span>{{member.login}}</span>
+                </li>
+            </a>
+        </ul>
+    </article>
+</section>

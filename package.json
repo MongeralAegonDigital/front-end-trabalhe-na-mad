@@ -1,0 +1,23 @@
+{
+  "name": "front-end-trabalhe-na-mad",
+  "version": "1.0.0",
+  "description": "Aplicação-teste feita para a aplicação à MAD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MongeralAegonDigital/front-end-trabalhe-na-mad.git"
+  },
+  "author": "Guilherme Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MongeralAegonDigital/front-end-trabalhe-na-mad/issues"
+  },
+  "homepage": "https://github.com/MongeralAegonDigital/front-end-trabalhe-na-mad#readme",
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7"
+  }
+}
