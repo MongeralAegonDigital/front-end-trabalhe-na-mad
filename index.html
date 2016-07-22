@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="gitHubSearchApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Front-End: Trabalhe na MAD - Teste</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <h1>Formulário de consulta da API do GitHub</h1>
+                <p>Consumindo https://github.com/frontendbr</p>
+                <nav ng-controller="navController">
+                    <ul class="main-nav">
+                        <a href="#/membros"><li ng-class="{ active: isActive('/membros')}">Membros</li></a>
+                        <a href="#/repositorios"><li ng-class="{ active: isActive('/repositorios')}">Repositórios</li></a>
+                    </ul>
+                </nav>
+            </header>
+            <div ng-view></div>
+        </div>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="controllers/controllers.js"></script>
+    </body>
+</html>

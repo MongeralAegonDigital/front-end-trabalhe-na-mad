@@ -1,0 +1,13 @@
+<section class="main-section">
+    <input class="search-input" ng-model="searchValue" placeholder="Procurar repositórios">
+    <br>
+    <article class="results">
+        <span ng-show="searchValue">Resultados para: <h3>{{ searchValue }}</h3></span>
+        <ul ng-repeat="repo in data | filter:searchValue">
+            <li class="repo-info">
+                <a class="repo-name" href="{{repo.html_url}}">{{repo.name}}</a>
+                <p>{{repo.description}}</p>
+            </li>
+        </ul>
+    </article>
+</section>
