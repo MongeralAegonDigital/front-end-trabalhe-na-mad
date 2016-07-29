@@ -8,11 +8,18 @@
     routeConfig.$inject = ['$routeProvider', '$locationProvider'];
 
     function routeConfig($routeProvider, $locationProvider) {
+
         $locationProvider.html5Mode(true);
         $routeProvider
             .when('/', {
                 templateUrl: 'templates/home.html',
-                controller: 'AddOrderController'
+                controller: 'Home',
+                controllerAs: 'hc'
+            })
+            .when('/busca/:nome', {
+                templateUrl: 'templates/busca.html',
+                controller: 'Busca',
+                controllerAs: 'bc'
             })
             .otherwise({
                 redirectTo: '/'

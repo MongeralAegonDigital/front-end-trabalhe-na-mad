@@ -20,11 +20,12 @@
   },
   "homepage": "https://github.com/marciogurka/front-end-trabalhe-na-mad#readme",
   "dependencies": {
-    "angular": "^1.4.*",
-    "angular-animate": "^1.4.*",
-    "angular-aria": "^1.4.*",
+    "angular": "^1.5.*",
+    "angular-animate": "^1.5.*",
+    "angular-aria": "^1.5.*",
     "angular-material": "^1.1.0-rc.5",
-    "angular-route": "^1.4.*"
+    "angular-route": "^1.5.*",
+    "animate.css": "^3.5.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
