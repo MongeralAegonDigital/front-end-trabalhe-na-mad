@@ -1,0 +1,14 @@
+<div>
+    <form name="userForm" class="animated" ng-class="{fadeIn: hc.busca, fadeOut: !hc.busca}" ng-submit="hc.buscar(hc.nome)" data-ng-show="hc.busca" data-ng-init="hc.busca = true">
+        <div layout-gt-xs="column" flex="50" flex-offset="25" layout-align="center">
+            <h3 class="text-center">Busca de Usuários e Organizações no GitHub</h3>
+            <md-input-container class="md-block md-primary" flex-gt-xs>
+                <label>Qual usuário/organização você quer buscar?</label>
+                <input ng-model="hc.nome" autocomplete="off">
+            </md-input-container>
+            <a class="md-button md-raised md-primary" href="/busca/{{hc.nome}}">
+                Buscar
+            </a>
+        </div>
+    </form>
+</div>

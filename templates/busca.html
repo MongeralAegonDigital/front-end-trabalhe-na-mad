@@ -1,0 +1,100 @@
+<div class="animated" layout-gt-xs="column" flex="100" layout-align="center" ng-show="bc.user" ng-class="{fadeIn: !bc.busca, fadeOut: bc.busca}">
+    <a class="md-button md-primary" href="/">Realizar outra busca</a>
+    <div layout="row">
+        <div flex="50">
+            <md-card ng-show="!bc.user">
+                <md-card-title-text>
+                    <span class="md-headline text-center md-padding">Não existe usuário com esse nome</span>
+                </md-card-title-text>
+            </md-card>
+            <md-card ng-show="bc.user">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Usuário: {{bc.user.name}}</span>
+                        <span class="md-subhead">Seguidores: {{bc.user.followers}}    Seguindo: {{bc.user.following}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="row" layout-align="space-between">
+                    <div class="md-media-xl card-media">
+                        <img src="{{bc.user.avatar_url}}">
+                    </div>
+                    <md-card-actions layout="column" class="user-info">
+                        <p ng-show="bc.user.company">Empresa: {{bc.user.company}}</p>
+                        <p ng-show="bc.user.email">E-mail: {{bc.user.email}}</p>
+                        <p ng-show="bc.user.blog">Website: <a href="{{bc.user.blog}}" target="_blank">{{bc.user.blog}}</a></p>
+                        <p ng-show="bc.user.location">Local: {{bc.user.location}}</p>
+                        <p ng-show="bc.user.bio">Bio: {{bc.user.bio}}</p>
+                        <a href="{{bc.user.html_url}}" class="md-button md-primary margin-top" target="_blank">Perfil</a>
+                        <a href="{{bc.user.repos_url}}" class="md-button md-primary" target="_blank">Repositórios</a>
+                        <a href="{{bc.user.followers_url}}" class="md-button md-primary" target="_blank">Seguidores</a>
+                        <a href="{{bc.user.organizations_url}}" class="md-button md-primary" target="_blank">Organizações</a>
+                    </md-card-actions>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div flex="50">
+            <md-card ng-show="!bc.org">
+                <md-card-title-text>
+                    <span class="md-headline text-center md-padding">Não existe organização com esse nome</span>
+                </md-card-title-text>
+            </md-card>
+            <md-card ng-show="bc.org">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Organização: {{bc.org.name}}</span>
+                        <span class="md-subhead">Seguidores: {{bc.org.followers}}    Seguindo: {{bc.org.following}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="row" layout-align="space-between">
+                    <div class="md-media-xl card-media">
+                        <img src="{{bc.org.avatar_url}}">
+                    </div>
+                    <md-card-actions layout="column" class="user-info">
+                        <p ng-show="bc.org.email">E-mail: {{bc.org.email}}</p>
+                        <p ng-show="bc.org.blog">Website: <a href="{{bc.org.blog}}" target="_blank">{{bc.org.blog}}</a></p>
+                        <p ng-show="bc.org.location">Local: {{bc.org.location}}</p>
+                        <a href="{{bc.org.html_url}}" class="md-button md-primary margin-top" target="_blank">Perfil</a>
+                        <a href="{{bc.org.repos_url}}" class="md-button md-primary" target="_blank">Repositórios</a>
+                        <a href="{{bc.org.events_url}}" class="md-button md-primary" target="_blank">Eventos</a>
+                    </md-card-actions>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</div>
+<div layout-gt-xs="row" flex="100" layout-align="center" ng-show="!bc.busca" class="animated" ng-class="{fadeIn: !bc.busca, fadeOut: bc.busca}">
+    <div flex="50">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Repositórios do usuário</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content layout="row" layout-align="space-between">
+                <div ng-show="bc.user_repos.length == 0">
+                    <p>Nenhum Repositório</p>
+                </div>
+                <md-card-actions layout="column" class="user-info repository-item" ng-show="bc.user_repos.length > 0">
+                    <a ng-repeat="repositorio in bc.user_repos" flex="100" href="{{repositorio.html_url}}" target="_blank" class="md-primary md-button text-left">{{repositorio.name}}</a>
+                </md-card-actions>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div flex="50">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Organizações do usuário</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content layout="row" layout-align="space-between">
+                <div ng-show="bc.user_orgs.length == 0">
+                    <p>Nenhuma organização</p>
+                </div>
+                <md-card-actions layout="column" class="user-info repository-item " ng-show="bc.user_orgs.length > 0">
+                    <a ng-repeat="organizacao in bc.user_orgs" flex="100" href="{{organizacao.url}}" target="_blank" class="md-primary md-button text-left">{{organizacao.login}}</a>
+                </md-card-actions>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

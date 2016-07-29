@@ -1,0 +1,34 @@
+{
+  "name": "local.mad.com",
+  "version": "1.0.0",
+  "description": "Front-End: Trabalhe na MAD",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciogurka/front-end-trabalhe-na-mad.git"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "Márcio José Gurka Júnior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marciogurka/front-end-trabalhe-na-mad/issues"
+  },
+  "homepage": "https://github.com/marciogurka/front-end-trabalhe-na-mad#readme",
+  "dependencies": {
+    "angular": "^1.5.*",
+    "angular-animate": "^1.5.*",
+    "angular-aria": "^1.5.*",
+    "angular-material": "^1.1.0-rc.5",
+    "angular-route": "^1.5.*",
+    "animate.css": "^3.5.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
