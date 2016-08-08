@@ -1,22 +1,92 @@
+## Teste Consulta da Api do Github
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+##Ferramentas usadas
+
+Node.js
+
+Angular.js
+
+Express
+
+Bootstrap
+
+Jquery
+
+##Rodando o app
+
+###1 opção)
+
+Clique no link abaixo para ver a versão online do app no Heroku
+
+https://mongeral.herokuapp.com/home  
 
 
-Welcome to your Node.js project on Cloud9 IDE!
+###2 opção)
 
-This chat example showcases how to use `socket.io` with a static `express` server.
+Rodar o app localmente
 
-## Running the server
 
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
 
-2) Alternatively you can launch the app from the Terminal:
+####Instalando
 
-    $ node server.js
 
-Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+######Windows
+
+A) Caso não tenha instalado no seu computador, entre no link abaixo para baixar a ultima versão de Node.js
+
+
+https://nodejs.org/en/download/
+
+
+B) Baixe os arquivos desse repositório através do botão verde no top desta tela
+
+
+C) Após o download, vá para o local da pasta do projeto através "Prompt de comando" e use "npm install"
+
+
+######Ubuntu
+
+A) Caso não tenha instalado no seu computador, entre no link abaixo ou execute um dos comandos abaixo no terminal
+
+Link:
+https://nodejs.org/en/download/
+
+OU
+
+Commandos
+
+    for Node.js v4
+    curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+    OR for Node.js v5
+    curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+    OR for Node.js v6
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+    
+OU
+
+    sudo apt-get install nodejs
+    sudo apt-get install npm
+    
+
+B) Após baixar o nodejs use o seguinte comando no terminal: "sudo apt-get install -y nodejs"
+
+C) Após o download, vá para o local da pasta do projeto através "Prompt de comando" e use "npm install"
+
+
+######Mac
+
+http://blog.teamtreehouse.com/install-node-js-npm-mac
+
+http://armandocouto.com.br/toturiais/instalando-o-nodejs-e-o-express-para-mac/
+
+
+
+####Rodando o servidor
+
+No terminal(Ubuntu,Mac) ou prompt de comando(Windows) mude para o local da pasta do app e use o comando abaixo
+    
+     node server.js
+
+Entre no link abaixo para ver o app funcionando
+
+    http://127.0.0.1:5000/
