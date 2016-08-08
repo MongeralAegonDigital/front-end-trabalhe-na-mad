@@ -1,0 +1,69 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 1200px) {
+    #resultWrapper div{
+        margin-bottom: 30px;
+        margin-left: 110px;
+        
+    }
+    
+    .repoNameA{
+        font-weight: bold;
+        
+    }
+    
+    #resultWrapper small{
+        margin-right: 10px;
+        
+    }
+    
+    #h1Results{
+        margin-left: 110px;
+        font-size: 36px;
+        
+    }
+    
+    #resultHr{
+        margin-left: 110px;
+        
+    }
+}
+
+@media only screen and (min-device-width : 600px) and (max-device-width : 1200px) {
+    #resultWrapper a{
+        font-size: 30px;
+        
+    }
+
+    #resultWrapper small{
+        font-size: 20px;
+        
+    }
+}
+
+@media (min-width:1200px) {
+    #resultWrapper div{
+        margin-bottom: 30px;
+        margin-left: 110px;
+        
+    }
+    
+    .repoNameA{
+        font-weight: bold;
+        
+    }
+    
+    #resultWrapper small{
+        margin-right: 10px;
+        
+    }
+    
+    #h1Results{
+        margin-left: 110px;
+        font-size: 36px;
+        
+    }
+    
+    #resultHr{
+        margin-left: 110px;
+        
+    }
+}

@@ -1,0 +1,91 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 1200px) {
+    #navbar{
+        height: 55px;
+        
+    }
+    
+    #navbarUl li a{
+        color:#2d3238 !important;  
+        
+    }
+    
+    #navbarUl li{
+        color:#2d3238 !important;
+        display: none;
+        margin-top: -5px;
+        
+    }
+
+    
+    #responsiveBtn{
+        margin-top: -50px;
+        
+    }
+    
+
+    #navbarImg{
+        background-image: url('../imgs/githubicon.png');
+        background-size: 50px;
+        height: 60px;
+        width: 50px;
+        margin-top: -2px;
+        
+    }
+}
+
+
+
+@media only screen and (min-device-width : 600px) and (max-device-width : 1200px) {
+    #navbar{
+        height: 100px;
+        
+    }
+    
+    #navbarUl li a{
+        font-size: 20px;
+        
+    }
+    
+    
+    #responsiveBtn{
+        margin-top: -80px;
+        height: 50px;
+        width: 50px;
+    }
+    
+
+    #navbarImg{
+        background-image: url('../imgs/githubicon.png');
+        background-size: 80px;
+        height: 90px;
+        width: 80px;
+        margin-top: -4px;
+        
+    }
+}
+
+@media (min-width:1200px) { 
+    #navbar{
+        height: 55px;
+        
+    }
+    
+    #navbarUl li a{
+        color:#2d3238 !important;  
+        
+    }
+    
+    #navbarUl li a:hover{
+        background-color: #e7e7e7 !important;
+    }
+    
+    #navbarImg{
+        background-image: url('../imgs/githubicon.png');
+        background-size: 50px;
+        height: 60px;
+        width: 50px;
+        margin-left: 100px;
+        margin-top: -2px;
+        
+    }
+}

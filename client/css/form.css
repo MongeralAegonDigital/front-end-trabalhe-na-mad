@@ -1,0 +1,248 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 1200px) {
+    #formContainer{
+        margin:0 auto;
+        height: 100%;
+        width: 320px;
+        background-color: #2d3238;
+        color:white;
+        
+    }
+    
+    #h1Form{
+        text-align: center;
+    }
+    
+    #formContainer .row{
+        margin-bottom: 20px;
+        
+    }
+    
+    #formH3,.formH4{
+        text-align: center;
+        margin-bottom: 20px;
+        
+    }
+    
+    #searchBtn{
+        margin-top: 40px;
+        width: 100%;
+        background-color: #ff015b; 
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 50px;
+        
+    }
+    
+    #searchBtn:hover{
+        background-color:#2e1d74 !important;
+        
+    }
+    
+    #formNavbar{
+        width: 100%;
+        background-color: #ff015b!important;
+        border-style: hidden!important;
+        
+    }
+    
+    #searchNav > a{
+        width: 118px !important;
+        margin-left: 10px;
+    }
+
+}
+
+@media only screen and (min-device-width : 410px) and (max-device-width : 1200px) {
+    #formContainer{
+        margin:0 auto;
+        height: 100%;
+        width: 400px;
+        background-color: #2d3238;
+        color:white;
+        
+    }
+    
+    #h1Form{
+        text-align: center;
+    }
+    
+    #formContainer .row{
+        margin-bottom: 20px;
+        
+    }
+    
+    #formH3{
+        font-size: 26px;
+        
+    }
+    
+    #searchBtn{
+        margin-top: 40px;
+        width: 100%;
+        background-color: #ff015b; 
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 50px;
+        
+    }
+    
+
+}
+
+@media only screen and (min-device-width : 600px) and (max-device-width : 1200px) {
+    #formContainer{
+        margin:0 auto;
+        height: 100%;
+        width: 600px;
+        background-color: #2d3238;
+        color:white;
+        
+    }
+    
+    #h1Form{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    
+    #formH3{
+        font-size: 30px;
+        
+    }
+    
+    .formH4{
+        font-size: 27px;
+    }
+    
+    label{
+        font-size: 20px;
+    }
+    
+    #searchBtn{
+        margin-top: 40px;
+        width: 100%;
+        background-color: #ff015b; 
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 26px;
+        margin-bottom: 50px;
+        
+    }
+    
+    #formText,#languageFilter{
+        font-size: 17px;
+    }
+    
+
+}
+
+
+@media only screen and (min-device-width : 800px) and (max-device-width : 1200px) {
+    #formContainer{
+        margin:0 auto;
+        height: 100%;
+        width: 800px;
+        background-color: #2d3238;
+        color:white;
+        
+    }
+    
+    #h1Form{
+        text-align: center;
+        font-size: 50px;
+    }
+
+    
+    #formH3{
+        font-size: 40px;
+        
+    }
+    
+    .formH4{
+        font-size: 33px;
+    }
+    
+    
+    label{
+        font-size: 23px;
+    }
+    
+    #searchBtn{
+        margin-top: 40px;
+        width: 100%;
+        background-color: #ff015b; 
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 26px;
+        margin-bottom: 50px;
+        
+    }
+    
+    #formText,#languageFilter{
+        font-size: 20px;
+    }
+    
+
+}
+
+@media (min-width:1200px) {
+    #formContainer{
+        margin:0 auto;
+        height: 100%;
+        width: 500px;
+        background-color: #2d3238;
+        color:white;
+        
+    }
+    
+    #formContainer .row{
+        margin-bottom: 20px;
+        
+    }
+    
+    #formH3,.formH4{
+        text-align: center;
+        margin-bottom: 20px;
+        
+    }
+    
+    #searchBtn{
+        margin-top: 40px;
+        width: 100%;
+        background-color: #ff015b; 
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 50px;
+        
+    }
+    
+    #searchBtn:hover{
+        background-color:#2e1d74 !important;
+        
+    }
+    
+    #formNavbar{
+        width: 100%;
+        background-color: #ff015b!important;
+        border-style: hidden!important;
+        
+    }
+}

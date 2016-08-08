@@ -1,0 +1,57 @@
+<h1 id="h1Form">Biblioteca Github</h1>
+<div class="container" id="formContainer">
+    <div class="row">
+        <nav class="navbar navbar-default" id="formNavbar">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li id="searchNav" class="active" ><a href="#">Organizações</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <h3 id="formH3">Pesquise Organizações</h3>
+    <form id="formOrganization">
+        <div class="row">
+            <div class="col-sm-12">
+                <input type="text" placeholder="Add your input" class="form-control" id="formText" ng-model="Data.organization"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label><input type="checkbox" ng-click="extraCheckbox()" id="formCheck" data-extra = "extras" ng-model="langData.checkbox1">Opções extras</label>
+            </div>
+        </div>
+        <div class="row" ng-hide="extras">
+            <h4 class="formH4">Orderne os resultados</h4>
+            <div class="col-sm-12">
+                <input type="text" placeholder="Limite a pesquisa a uma linguagem" class="form-control" id="languageFilter" ng-model="langData.lang"/>
+            </div>
+        </div>
+        <div class="row" ng-hide="extras"id="formLowHigh">
+            <h4 class="formH4">Limite os valores de Stargazers e Forks </h4>
+            <div class="col-sm-6">
+                <label><input type="checkbox" class="forkStarLabels" id="formCheck2" ng-click="stargazers=!stargazers" ng-model="langData.checkbox2">Stargazers</label><br>
+                <label id="degreTypeLabel">Máximo</label>
+                <input type="number" class="form-control" ng-disabled="stargazers" ng-model="langData.maxStarsGazers" />
+                <label id="degreTypeLabel">Mínimo</label>
+                <input type="number" class="form-control" ng-disabled="stargazers" ng-model="langData.minStarsGazers" />
+                
+            </div>
+            <div class="col-sm-6">
+                <label><input type="checkbox" class="forkStarLabels" ng-click="fork=!fork" ng-model="langData.checkbox3" id="formCheck3">Forks</label><br>
+                <label id="degreTypeLabel">Máximo</label>
+                <input type="number" class="form-control" ng-disabled="fork" ng-model="langData.maxForks"/>
+                <label id="degreTypeLabel">Mínimo</label>
+                <input type="number" class="form-control" ng-disabled="fork" ng-model="langData.minForks"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="submit" id="searchBtn" ng-click="searchSub()">Pesquise</button>
+            </div>
+        </div>
+            
+    </form> 
+    <p>{{Data.organization}}</p>
+</div>
