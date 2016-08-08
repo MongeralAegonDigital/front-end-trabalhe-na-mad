@@ -9,6 +9,10 @@
   },
   "author": "gmmoraes",
   "license": "ISC",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/gmmoraes/consulta-api-github"
+},
   "devDependencies": {
     "angular": "^1.5.8",
     "angular-ui-bootstrap": "^2.0.1",
