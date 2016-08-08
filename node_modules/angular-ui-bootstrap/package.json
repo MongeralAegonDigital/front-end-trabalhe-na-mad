@@ -1,0 +1,86 @@
+{
+  "author": {
+    "name": "https://github.com/angular-ui/bootstrap/graphs/contributors"
+  },
+  "name": "angular-ui-bootstrap",
+  "version": "2.0.1",
+  "homepage": "http://angular-ui.github.io/bootstrap/",
+  "dependencies": {},
+  "directories": {
+    "lib": "src/"
+  },
+  "files": [
+    "index.js",
+    "dist/",
+    "src/",
+    "template/"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-ui/bootstrap.git"
+  },
+  "devDependencies": {
+    "angular": "1.5.5",
+    "angular-mocks": "1.5.5",
+    "angular-sanitize": "1.5.5",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-conventional-changelog": "^6.1.0",
+    "grunt-ddescribe-iit": "0.0.6",
+    "grunt-eslint": "^17.3.1",
+    "grunt-html2js": "^0.3.0",
+    "grunt-karma": "^0.12.0",
+    "jasmine-core": "^2.2.0",
+    "karma": "0.13.22",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.5.0",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-jasmine": "^0.3.5",
+    "load-grunt-tasks": "^3.3.0",
+    "lodash": "^4.1.0",
+    "marked": "^0.3.5",
+    "semver": "^5.0.1",
+    "shelljs": "^0.6.0"
+  },
+  "license": "MIT",
+  "gitHead": "e8e4ef1070423836eb5d7c1a8a4a2e2888f37f92",
+  "description": "[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular-ui/bootstrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://secure.travis-ci.org/angular-ui/bootstrap.svg)](http://travis-",
+  "bugs": {
+    "url": "https://github.com/angular-ui/bootstrap/issues"
+  },
+  "_id": "angular-ui-bootstrap@2.0.1",
+  "_shasum": "0ee9008ec7825932950e5dbd4db8169dba198cb6",
+  "_from": "angular-ui-bootstrap@latest",
+  "_npmVersion": "3.8.6",
+  "_nodeVersion": "6.0.0",
+  "_npmUser": {
+    "name": "wesleycho",
+    "email": "wesley.cho@gmail.com"
+  },
+  "dist": {
+    "shasum": "0ee9008ec7825932950e5dbd4db8169dba198cb6",
+    "tarball": "https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "foxandxss",
+      "email": "Foxandxss@gmail.com"
+    },
+    {
+      "name": "wesleycho",
+      "email": "wesley.cho@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/angular-ui-bootstrap-2.0.1.tgz_1470119589225_0.4005437456071377"
+  },
+  "_resolved": "https://registry.npmjs.org/angular-ui-bootstrap/-/angular-ui-bootstrap-2.0.1.tgz"
+}

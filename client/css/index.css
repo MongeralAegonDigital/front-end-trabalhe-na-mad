@@ -1,0 +1,27 @@
+@import 'result.css';
+@import 'home.css';
+@import 'colors.css';
+@import 'navbar.css';
+@import 'form.css';
+@import 'footer.css';
+
+
+
+
+/** user list**/
+
+.userOL{
+    display: inline-block;
+}
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 3px;
+    height: 32px;
+    width: 32px;
+    border-style: solid;
+    border-color: #eee;
+}

@@ -1,0 +1,372 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 1200px) {
+    #homeContainer h1{
+        text-align:center; 
+        font-weight:100;
+        font-size:40px;
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+    
+    #homeContainer h5 {
+        text-align:center; 
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+    
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 150px;
+        margin-left: 70px;
+        margin-top: -40px;
+        
+    }
+    
+    #homeContainer{
+        width:100%;
+        height: 320px;
+        background: rgba(34, 30, 31, 1);
+        background:-o-linear-gradient(120deg, white 20%, rgba(34, 30, 31, 1) 0%);
+        background:-moz-linear-gradient(120deg, white 20%, rgba(34, 30, 31, 1) 0%);
+        background:-webkit-linear-gradient(120deg, white 20%, rgba(34, 30, 31, 1) 0%);
+        margin-top: -20px;
+        
+    }
+    
+    /**menu2**/
+    #menu2Ui{
+        display: block;
+    }
+    
+    #formInfo {
+        display: block;
+        
+    }
+    
+    #imgMenu2{
+        background-color: rgb(228,228,228);
+        margin-top: -20px;
+    }
+    
+    #mobileFirstImg{
+        width:300px;
+    }
+    body{
+        background-color: #e4e4e4!important;
+        
+    }
+    
+}
+
+@media only screen and (min-device-width : 360px) and (max-device-width : 1200px) {
+    #homeContainer h1{
+        text-align:center; 
+        font-weight:120;
+        font-size:50px;
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+    
+    #homeContainer h5 {
+        text-align:center; 
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+    
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 150px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 150px;
+        margin-left: 80px;
+        margin-top: -40px;
+        
+    }
+    
+
+    
+    /**menu3**/
+    
+    #mobileFirstImg{
+        width:340px;
+    }
+}
+
+@media only screen and (min-device-width : 414px) and (max-device-width : 1200px) {
+    #homeContainer h1{
+        text-align:center; 
+        font-weight:120;
+        font-size:50px;
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 160px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 160px;
+        margin-left: 100px;
+        margin-top: -40px;
+        
+    }
+    
+
+    
+    /**menu3**/
+    
+    #mobileFirstImg{
+        width:360px;
+    }
+}
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 1200px) {
+    #homeContainer h1{
+        text-align:center; 
+        font-weight:120;
+        font-size:53px;
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 160px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 160px;
+        margin-left: 150px;
+        margin-top: -40px;
+        
+    }
+    
+
+    
+    /**menu3**/
+    
+    #mobileFirstImg{
+        width:400px;
+    }
+}
+
+@media only screen and (min-device-width : 600px) and (max-device-width : 1200px) {
+    #homeContainer h1{
+        text-align:center; 
+        font-weight:120;
+        font-size:70px;
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 210px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 210px;
+        margin-left: 160px;
+        margin-top: -40px;
+        
+    }
+    
+    /**menu2**/
+    
+    #imgMenu2 img{
+        width: 300px;
+    }
+    
+    #formInfo p{
+        font-size: 20px;
+    }
+    
+
+    
+    /**menu3**/
+    
+    #mobileFirstImg{
+        width:500px;
+    }
+}
+
+
+@media only screen and (min-device-width : 760px) and (max-device-width : 1200px) {
+
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 210px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 210px;
+        margin-left: 270px;
+        margin-top: -40px;
+        
+    }
+    
+    /**menu2**/
+    
+    #imgMenu2{
+        width: 100%;
+    }
+    
+    #formInfo{
+        width: 100%
+    }
+    
+    #formInfo p{
+        font-size: 30px;
+    }
+    
+    #formInfo h3{
+        font-size: 36px;
+    }
+    
+
+    
+    /**menu3**/
+    
+    #mobileFirstImg{
+        width:500px;
+    }
+    
+    #redirectColumn h3{
+        font-size: 30px;
+    }
+    
+    #redirectColumn {
+        width:100%;
+    }
+}
+
+@media only screen and (min-device-width : 900px) and (max-device-width : 1200px) {
+    
+
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 210px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 210px;
+        margin-left: 450px;
+        margin-top: -40px;
+        
+    }
+    
+    /**menu3**/
+    
+    #mobileFirstImg{
+        width:900px;
+    }
+
+}
+
+
+
+@media (min-width:1200px) { 
+    
+    #homeContainer{
+        width:100%;
+        height: 452px;
+        background: rgba(34, 30, 31, 1);
+        background:-o-linear-gradient(120deg, white 20%, rgba(34, 30, 31, 1) 0%);
+        background:-moz-linear-gradient(120deg, white 20%, rgba(34, 30, 31, 1) 0%);
+        background:-webkit-linear-gradient(120deg, white 20%, rgba(34, 30, 31, 1) 0%);
+        margin-top: -20px;
+        
+    }
+    
+    #homeContainer h1{
+        text-align:center; 
+        font-weight:200;
+        font-size:70px;
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+    
+    #homeContainer h5 {
+        text-align:center; 
+        font-family: 'Electrolize', sans-serif;
+        position: relative;
+        color: white;
+        
+    }
+    
+    #homeImg{
+        background-image: url("https://octodex.github.com/images/privateinvestocat.jpg");
+        background-size: 426px;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 426px;
+        margin-top:-110px;
+        margin-left: 450px;
+        
+    }
+    
+    #menu2Ui{
+        margin-top: 36px;
+        display: block;
+        
+    }
+    
+    #formInfo {
+        display: block;
+        margin-left: 100px;
+        
+    }
+    
+    #mobileFirstImg{
+        margin-left: -30px;
+        margin-top: -25px;
+        width: 600px !important;
+    }
+    
+    #menu3Ui{
+        background-color: white !important;
+        
+    }
+    
+    #userRow{
+        margin-top: 100px !important;
+        padding-bottom: 20px;
+        padding-top: 100px;
+        
+    }
+    
+    #redirectRow{
+        text-align: center;
+        padding-bottom: 100px;
+        
+    }
+    
+    body{
+        background-color: #e4e4e4!important;
+        
+    }
+    
+    #h1Form{
+        font-family: helvetica;
+        font-weight: 500;
+        line-height: 1.1;
+        text-align: center;
+        
+    }
+}
