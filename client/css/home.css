@@ -334,8 +334,9 @@
     }
     
     #mobileFirstImg{
-        margin-left: -20px;
+        margin-left: -30px;
         margin-top: -25px;
+        width: 600px !important;
     }
     
     #menu3Ui{
