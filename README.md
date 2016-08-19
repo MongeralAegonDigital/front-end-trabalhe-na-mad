@@ -8,7 +8,7 @@ You should run on node 4.4.x
 
 ## Install:
 
-[sudo] npm install && $ bower install
+[sudo] npm install && bower install
 
 ## Run / Watch:
 
