@@ -1,0 +1,102 @@
+@import 'reset';
+
+html { height: 100%; }
+body { height: 100%; margin: 0;	background:url(../img/bg.jpg) repeat; }
+
+$font1: 'Myriad Pro', Geneva, sans-serif;
+$font2: 'Verdana', Geneva, sans-serif;
+$color1: #4078c0;
+$color2: red;
+
+@mixin large-box {
+    display:inline-block;
+    width:100%;
+}
+
+#wrap {
+    max-width:600px;
+    height:auto;
+    margin:0 auto;
+    margin-top:20px;
+    padding:20px;
+    background:#fff;
+}
+
+header {
+    h1 {
+        @include large-box;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $font1;
+        text-transform: uppercase;
+        text-shadow: #fff 2px 2px 2px;
+        margin-bottom:30px;
+    }
+}
+
+.container {
+    
+    max-width:450px;
+    height:auto;
+    margin:0 auto;
+    
+    p {
+        font-family: $font2;
+        font-size:10px;
+        color:#666;
+        @include large-box;
+        margin: 8px 0;
+    }
+    
+}
+
+form {
+    input {
+	padding:10px 15px;
+	border:1px solid #ccc;
+	font-family: 'Verdana', Geneva, sans-serif;
+    }
+    
+    input[type='submit'] {
+        text-transform: uppercase;
+        cursor:pointer;
+        color:#666;
+        background:#ddd;
+        
+        &:hover {
+        background:#000;
+        color:#fff;
+        }
+        
+    }
+}
+
+ul.result {
+    li {
+        @include large-box;
+        font-family: $font2;
+        font-size: 12px;
+        border-bottom:1px solid #ccc;
+        padding:8px 0;
+        
+        .title {
+            color: $color1;
+            font-size: 20px;
+            @include large-box;
+        }
+        
+        span.desc {
+            margin: 8px 0;
+            @include large-box;
+            line-height: 15px;
+        }
+    }
+    
+    li.error {
+        color: $color2;
+    }
+}
+
+*:focus {
+    outline: 0;
+}
