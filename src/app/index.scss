@@ -27,6 +27,27 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   }
 }
 
+.clear {
+	clear: both;
+}
+.no-pdg {
+	padding: 0 1px;
+}
+
+.container {
+	.avatar {
+		width: 100%;
+		height: auto;
+		max-width: 220px;
+	}
+	.form-search {
+		margin: 0 auto 20px auto;
+		text-align: center;
+		width: 100%;
+	}	
+}
+
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

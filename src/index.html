@@ -28,24 +28,44 @@
 
      <div class="container" ng-app="gitapi">
       <div class="row main-content">
-        <h1>Desafio Frontend - MAD</h1>
-        <h3>Github API Search - Angular</h3>
+        <div>
+            <h1>Desafio Frontend - MAD</h1>
+            <h3>Github API Search - Angular</h3> 
+        </div>
 
         <div class="animated fadeIn" ng-controller="ApiController">
-          <form class="form-group">
-                <input type="text" class="form-control" ng-model="username"  placeholder="Digite seu nome de usuário"/>
-                <button  type="submit" ng-click="Get()" class="btn btn-danger btn-block"> Buscar</button>
+          <form class="form-horizontal">
+          <div class="form-group form-search">
+                <div class="col-md-11 no-pdg">
+                    <input type="text" class="form-control" ng-model="username"  placeholder="Digite seu nome de usuário"/>
+                </div>
+                <div class="col-md-1 no-pdg">
+                    <button  type="submit" ng-click="Get()" class="btn btn-primary btn-block"> Buscar</button>
+                </div>
+          </div>
+                
           </form>
           <div class="well animated zoomIn" onclick="Get()">
-            <img src="{{datas.avatar_url}}" width="100" height="100" alt="Avatar" />
-            <h5>Username: {{datas.login}}</h5> 
-            <h5>E-mail: {{datas.email}}</h5>
-            <h5>Name: {{datas.name}}</h5>
-            <h5>Company: {{datas.company}}</h5>
-            <h5>Url: <a href="{{datas.url}}" title="">{{datas.url}}</a></h5>
-            <h5>Location: {{datas.location}}</h5>
-            <h5>Bio: {{datas.bio}}</h5>
-            <h5>Repositories: <a href="{{datas.repos_url}}" title="">{{datas.repos_url}}</a></h5>
+            <div class="col-md-3">
+                <img src="{{datas.avatar_url}}" class="avatar img-thumbnail" alt="" />
+            </div>
+            <div class="col-md-5">
+                <h5>Username: {{datas.login}}</h5> 
+                <h5>E-mail: {{datas.email}}</h5>
+                <h5>Name: {{datas.name}}</h5>
+                <h5>Company: {{datas.company}}</h5>
+                <h5>Url: <a href="{{datas.html_url}}" title="" target="_blank">{{datas.html_url}}</a></h5>
+                <h5>Location: {{datas.location}}</h5>
+                <h5>Bio: {{datas.bio}}</h5>
+                                
+            </div>
+            <div class="col-md-4">
+                <h4>Repositories:</h4>
+                <ul>
+                    <li ng-repeat="repositorio in repoData"><a href="{{repositorio.html_url}}" title="" target="_blank">{{repositorio.full_name}}</a></li>
+                </ul>                
+            </div>
+            <div class="clear"></div>
           </div>
         </div>
         
