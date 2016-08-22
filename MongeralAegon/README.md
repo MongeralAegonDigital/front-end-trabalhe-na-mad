@@ -1,6 +1,6 @@
-## Comandos para inicialização
-	
-Requisitos
+# Comandos para inicialização
+
+##Requisitos
 	Node
 	NPM
 
@@ -14,20 +14,20 @@ Requisitos
 
 	npm start
 
-A aplicação estará rodando na url localhost:3000
+## A aplicação estará rodando na url localhost:3000
 
-Back-End
+## Back-End
 	Node
 	Express
 
-Front-End
+## Front-End
 	Sass
 	jQuery
 	React
 
-Modularização
+## Modularização
 	Browserify
 
-Automatização
+## Automatização
 	Gulp
 
