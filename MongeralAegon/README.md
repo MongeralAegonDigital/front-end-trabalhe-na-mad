@@ -1,9 +1,10 @@
 # Comandos para inicialização
 
-##Requisitos
+## Requisitos
 	Node
 	NPM
-##
+##Instruções para rodar a aplicação
+
     git clone git@github.com:werickvieira/MongeralAegon
 
     cd MongeralAegon
@@ -14,7 +15,7 @@
 
 	npm start
 
-## A aplicação estará rodando na url localhost:3000
+### A aplicação estará rodando na url localhost:3000
 
 ## Back-End
 	Node
