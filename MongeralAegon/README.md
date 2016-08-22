@@ -2,7 +2,7 @@
 
 ## Requisitos
 	Node
-	NPM
+	npm
 ##Instruções para rodar a aplicação
 
     git clone git@github.com:werickvieira/MongeralAegon
