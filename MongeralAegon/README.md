@@ -23,7 +23,6 @@
 
 ## Front-End
 	Sass
-	jQuery
 	React
 
 ## Modularização
