@@ -1,0 +1,12 @@
+body {
+
+    @import 'partials/functions';
+    @import 'partials/header';
+    @import 'partials/navMenu';
+
+    font-size: 16px;
+
+    .row {
+        margin-bottom: 0;
+    }
+}
