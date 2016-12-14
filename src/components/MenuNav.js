@@ -4,7 +4,7 @@
       render() {
           return (
               <nav className="blue-grey darken-4">
-                <ul>
+                <ul className="container">
                     <li><a href="#">Repositórios</a></li>
                     <li><a href="#">Issues</a></li>
                 </ul>
