@@ -4,10 +4,9 @@ class CampoBusca extends Component {
 
     render() {
         return (
-            <input type={this.props.type} id={this.props.id} className={this.props.id}/>
+            <input {...this.props}/>
         )
     }
-
 }
 
 export default CampoBusca;

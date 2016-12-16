@@ -1,31 +1,62 @@
 import React, { Component }  from 'react'
-import CampoBusca from'./CampoBusca'
+import BuscaUser  from './BuscaUser'
+import {formPrincipalAuth, formPrincipalToken} from '../actions/FormPrincipalActions'
 
-class FormPrincipal extends Component {
+import {connect}    from 'react-redux'
+@connect((store) => {
+    return {
+        GitApi: store.GitApi.GitApi,
+        GitApiFetched: store.GitApi.fetched
+    }
+})
+export default class FormPrincipal extends Component {
+    constructor() {
+        super();
+        this.state = {
+            code: '',
+            FormUser: false
+        }
+
+        this.logar = this.logar.bind(this);
+        this.token = this.token.bind(this);
+    }
+
+    componentWillMount() {
+
+        var getQueryString = function ( field, url ) {
+            var href = url ? url : window.location.href;
+            var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+            var string = reg.exec(href);
+            return string ? string[1] : null;
+        };
+
+        var thisCode = getQueryString('code');
+        this.setState({code: thisCode})
+        if(thisCode != null) {
+            this.token();
+            this.setState({
+                FormUser: true
+            })
+        }
+    }
+
+    token() {
+        this.props.dispatch(formPrincipalToken(this.state.code))
+    }
+
+    logar() {
+        this.props.dispatch(formPrincipalAuth())
+        console.log(this.props)
+    }
 
     render() {
         return (
             <div className="container">
+            <button onClick={this.logar} className="btn-github">logar com github</button>
               <div className="row">
-                <form className="col s12">
-                  <div className="row">
-                    <div className="input-field col s12">
-                      <CampoBusca id="nome_user" type="text" className="validate"/>
-                      <label htmlFor="nome_user">Nome do usuário</label>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="input-field col s12">
-                      <CampoBusca id="email_user" type="email" className="validate"/>
-                      <label htmlFor="email_user">Email do usuário</label>
-                    </div>
-                  </div>
-                  <button type="submit" className="btn blue-grey darken-4">Enviar</button>
-                </form>
+                 {this.state.FormUser && <BuscaUser/>}
               </div>
           </div>
         )
     }
 }
-
-export default FormPrincipal;

@@ -10,3 +10,8 @@ input[type=text]:focus:not([readonly]),input[type=email]:focus:not([readonly]) {
 input[type=text]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label {
     color: #263238;
 }
+
+.error {
+    color: red;
+    display: none;
+}

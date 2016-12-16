@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 import 'materialize-css/dist/css/materialize.min.css';
-import "./styles/main.scss"
-import Header        from './components/Header'
-import MenuNav       from './components/MenuNav'
-import FormPrincipal from './components/FormPrincipal'
+import "./styles/main.scss";
+import Header        from './components/Header';
+import MenuNav       from './components/MenuNav';
+import FormPrincipal from './components/FormPrincipal';
 
 class App extends Component {
     render() {
@@ -11,7 +13,9 @@ class App extends Component {
             <div>
                 <Header/>
                 <MenuNav/>
-                <FormPrincipal/>
+                <Provider store={store}>
+                    <FormPrincipal/>
+                </Provider>
             </div>
         )
     }
