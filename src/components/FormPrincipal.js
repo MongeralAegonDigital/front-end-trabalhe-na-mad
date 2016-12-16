@@ -52,7 +52,7 @@ export default class FormPrincipal extends Component {
     render() {
         return (
             <div className="container">
-            <button onClick={this.logar} className="btn-github">logar com github</button>
+            <button onClick={this.logar} className="btn-github">Clique para autenticar</button>
               <div className="row">
                  {this.state.FormUser && <BuscaUser/>}
               </div>

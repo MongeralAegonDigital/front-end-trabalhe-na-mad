@@ -5,8 +5,7 @@
           return (
               <nav className="blue-grey darken-4">
                 <ul className="container">
-                    <li><a href="#">Repositórios</a></li>
-                    <li><a href="#">Issues</a></li>
+                    <li><a href="#">Buscando repositórios</a></li>
                 </ul>
               </nav>
           )
