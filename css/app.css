@@ -1,0 +1,44 @@
+.user {
+  display: block;
+  width: 100%; }
+  .user .avatar {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ccc;
+    margin-right: 10px; }
+  .user span {
+    font-size: 25px; }
+  .user small {
+    background-color: #23527c;
+    color: #fff;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Helvetica", sans-serif; }
+
+h1.title {
+  font-family: "Helvetica", sans-serif; }
+
+ul.box {
+  margin-top: 40px; }
+  ul.box li, ul.box a.link {
+    display: inline-block;
+    width: 100%; }
+  ul.box li {
+    margin: 5px 0;
+    border-bottom: 1px solid #ccc; }
+  ul.box h2 {
+    color: #666;
+    font-size: 16px;
+    margin: 0; }
+  ul.box span.title {
+    font-weight: bold;
+    color: #000; }
+  ul.box span.title, ul.box a {
+    display: inline-block;
+    font-family: "Helvetica", sans-serif;
+    font-size: 16px; }

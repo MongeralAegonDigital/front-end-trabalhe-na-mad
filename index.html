@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="gitApp">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Api Git-Angular</title>
+<script src="vendors/angular.min.js" charset="utf-8"></script>
+<script src="vendors/jquery.min.js"></script>
+
+<link href="css/app.css" rel="stylesheet">
+<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="gitController">
+	<div class="container">
+
+	<h1>API Github Angular</h1>
+
+		 <div class="jumbotron">
+				
+			<div class="user">
+			<img class="avatar" src="{{usuarioData.avatar_url}}" title="{{usuarioData.name}}" />
+			<span>{{usuarioData.name}}</span>
+			<small>{{repoData.length}}</small>
+			<small>{{usuarioData.location}}</small>
+			</div>
+
+		 		<ul class="box">
+		 			<li ng-repeat="repos in repoData">
+		 			<span class="title">{{repos.name}}</span>
+			 		<a target="_blank" href="{{repos.html_url}}" class="link">{{repos.name}}</a>
+			 		<small>{{repos.description}}</small>
+		 			</li>
+		 		</ul>
+		 </div>
+
+	</div>
+</body>
+
+<!--<script src="vendors/angular-route.min.js"></script>-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+
+</html>
