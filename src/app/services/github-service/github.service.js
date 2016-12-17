@@ -4,16 +4,12 @@ export class GithubService {
 
     this.$log = $log;
     this.$http = $http;
-    this.apiHost = 'https://api.github.com/repos/Swiip/generator-gulp-angular';
+    this.apiHost = 'https://api.github.com/users';
   }
 
-  getContributors(limit=30) {
-    return this.$http.get(this.apiHost + '/contributors?per_page=' + limit)
-      .then((response) => {
-        return response.data;
-      })
-      .catch((error) => {
-        this.$log.error('XHR Failed for getContributors.\n' + angular.toJson(error.data, true));
-      });
+  getDevelopers(limit=30) {
+    this.$log.info("Catch data from api");
+    return this.$http.get(this.apiHost + '?per_page=' + limit);
   }
+
 }

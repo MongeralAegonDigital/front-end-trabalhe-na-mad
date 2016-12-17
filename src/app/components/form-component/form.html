@@ -1,0 +1,19 @@
+<div class="row" ng-if="!formCtrl.submited">
+  <div class="col-md-5">
+    <form>
+      <div class="form-group">
+        <label for='name'>Name</label>
+        <input type="text" ng-model="formCtrl.name" id="name" class="form-control" placeholder="Name">
+      </div>
+
+      <div class="form-group">
+        <label for='email'>Email</label>
+        <input type="email" ng-model="formCtrl.email" id="email" class="form-control" placeholder="Email">
+      </div>
+      
+      <div class="form-group">
+        <button class="btn btn-primary" ng-click="formCtrl.onSubmit()"> Buscar Desenvolvedores </button>
+      </div>
+    </form>
+  </div>
+</div>
