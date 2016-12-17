@@ -1,3 +1,10 @@
-form-component {
 
+//Variables
+$height: 100px;
+
+form-component{
+
+    .custom-margin{
+        margin-top: $height !important;
+    }
 }

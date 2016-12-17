@@ -44,6 +44,7 @@ var buildStyles = function() {
   var cssFilter = $.filter('**/*.css', { restore: true });
 
   return gulp.src([
+    path.join(conf.paths.src, '/app/**/*.scss'),
     path.join(conf.paths.src, '/app/index.scss')
   ])
     .pipe($.inject(injectFiles, injectOptions))

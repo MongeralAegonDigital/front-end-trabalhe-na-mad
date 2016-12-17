@@ -1,5 +1,7 @@
-$heigth: 80px;
 
-.top{
-    margin-top: $heigth !important;
+//Variables
+$height: 100px;
+
+developer-component{
+    margin-top: $height;
 }
