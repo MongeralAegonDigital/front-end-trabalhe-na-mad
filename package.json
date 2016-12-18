@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "preinstall": "npm install && bower install"
+
   },
   "devDependencies": {
     "babel-core": "~6.7.4",
@@ -46,6 +48,7 @@
     "karma-phantomjs-shim": "~1.2.0",
     "lodash": "~3.10.1",
     "main-bower-files": "~2.9.0",
+    "morgan": "^1.6.1",
     "ng-annotate-loader": "0.0.10",
     "phantomjs": "~1.9.18",
     "uglify-save-license": "~0.4.1",
