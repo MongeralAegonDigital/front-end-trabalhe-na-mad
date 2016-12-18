@@ -4,7 +4,7 @@
   "dependencies": {},
   "scripts": {
     "test": "gulp test",
-    "preinstall": "npm install && bower install"
+    "preinstall": "bower install & gulp"
 
   },
   "devDependencies": {
