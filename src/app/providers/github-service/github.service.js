@@ -28,10 +28,10 @@ export class GithubService {
       method: 'GET',
       params: {
         'per_page': limit
-      },
+    }/*,
       headers: {
         'Authorization': "Bearer " + this.TOKEN
-      }
+      }*/
     }
     return this.$http(options);
   }
@@ -43,10 +43,10 @@ export class GithubService {
       params: {
         'q': username,
         'per_page': this.LIMIT,
-      },
+    }/*,
       headers: {
         'Authorization': "Bearer " + this.TOKEN
-      }
+      }*/
     }
     return this.$http(options);
   }
