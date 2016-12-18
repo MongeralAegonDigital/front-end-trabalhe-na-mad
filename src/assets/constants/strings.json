@@ -6,7 +6,8 @@
       "TITLE": "Desenvolvedores",
       "REPOSITORIES": "Repositorios",
       "FOLLOWERS": "Seguidores",
-      "FILTER": "Filtrar desenvolvedores"
+      "FILTER": "Filtrar desenvolvedores",
+      "SEE_ON_GITHUB": "Ver no github"
   },
   "FORM_COMPONENT": {
       "BTN_TEXT": "Buscar",

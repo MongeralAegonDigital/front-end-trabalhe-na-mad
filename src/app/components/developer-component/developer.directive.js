@@ -43,7 +43,7 @@ class DeveloperController {
     this.REPOSITORIES = '';
     this.FOLLOWERS = '';
     this.FILTER = '';
-    this.ITEMS_PER_PAGE = 
+    this.SEE_ON_GITHUB = ''
 
     this.getResource();
 
@@ -58,6 +58,7 @@ class DeveloperController {
       this.FOLLOWERS = response.data.DEVELOPERS_COMPONENT.FOLLOWERS;
       this.REPOSITORIES = response.data.DEVELOPERS_COMPONENT.REPOSITORIES;
       this.FILTER = response.data.DEVELOPERS_COMPONENT.FILTER;
+      this.SEE_ON_GITHUB = response.data.DEVELOPERS_COMPONENT.SEE_ON_GITHUB; 
       
     }, ()=>{})
   } 

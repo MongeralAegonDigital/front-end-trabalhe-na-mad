@@ -26,7 +26,6 @@ export class GithubService {
     let options = {
       url: this.API_BASE + '/users' + (angular.isUndefined(username) ? '' : '/' + username ),
       method: 'GET',
-      timeout: 10000,
       params: {
         'per_page': limit
     },
@@ -41,7 +40,6 @@ export class GithubService {
     let options = {
       url: this.API_BASE + '/search/users',
       method: 'GET',
-      timeout: 10000,
       params: {
         'q': username,
         'per_page': this.LIMIT
