@@ -2,7 +2,7 @@
 
 <div class="custom-margin">
 
-    <div class="row" ng-if="developerCtrl.developers.length === 0">
+    <div class="row" ng-if="developerCtrl.developersOnScreen.length === 0">
         <div class="col-xs-12 col-md-offset-5 col-md-2">
             <img src="assets/images/ajax-loader.gif" class="loading">
         </div>
@@ -29,7 +29,7 @@
 
       <div class="row custom-margin-developers">
         <div id="products" class="list-group">
-          <div class="item col-xs-12 col-md-3" ng-repeat="dev in developerCtrl.developers | filter: searchText track by $index">
+          <div class="item col-xs-12 col-md-3" ng-repeat="dev in developerCtrl.developersOnScreen | filter: searchText track by $index">
             <div class="thumbnail custom-min-height">
                 <img class="group list-group-image img-circle"
                     ng-src={{dev.avatar_url}}
@@ -61,6 +61,19 @@
 
         </div>
 
+      </div>
+
+      <div class="row">
+        
+        <div class="col-md-12">
+          <ul uib-pagination 
+              boundary-links="true"
+              items-per-page="developerCtrl.itemsPerPage"
+              total-items="developerCtrl.totalItems" 
+              ng-model="developerCtrl.currentPage" 
+              ng-change="developerCtrl.pageChanged()">
+          </ul>
+        </div>
       </div>
     </div>
   </div>

@@ -7,8 +7,10 @@ import { runBlock } from './index.run';
 import { MainController } from './pages/main/main.controller';
 import { DeveloperListController } from './pages/developers/developer.controller'
 
-import { GithubService } from '../app/services/github-service/github.service';
-import { StringService } from '../app/services/string-service/string.service';
+import { GithubService } from '../app/providers/github-service/github.service';
+import { StringService } from '../app/providers/string-service/string.service';
+import { PaginationService } from '../app/providers/pagination-service/pagination.service';
+
 
 import { NavbarDirective } from '../app/components/navbar-component/navbar.directive';
 import { DeveloperDirective} from '../app/components/developer-component/developer.directive';
@@ -24,6 +26,7 @@ angular.module('frontEndTrabalheNaMad', [
   .run(runBlock)
   .service('githubService', GithubService)
   .service('stringService', StringService)
+  .service('paginationService', PaginationService)
   .controller('MainController', MainController)
   .controller('DeveloperListController', DeveloperListController)
   .directive('navbarComponent', NavbarDirective)

@@ -46,6 +46,6 @@ class FormController {
   
 
   onSubmit(){
-    this.$state.transitionTo('developers', {username: this.username});
+    this.$state.go('developers', {username: this.username});
   }
 }

@@ -5,9 +5,8 @@ export class DeveloperListController {
 
     this.$scope = $scope;
     this.githubService = githubService;
-    this.$state = $state;
     this.$log = $log;
-    this.getDevelopers();
+    this.$log.info("Contruct")
 
   }
 
@@ -23,7 +22,7 @@ export class DeveloperListController {
         });  
     
     } else {
-    this.githubService.getDevelopers()
+      this.githubService.getDevelopers()
         .then((response) => {
           if (response.data.length > 1)
             this.getInfoAboutDevelopers(response.data);
@@ -37,20 +36,23 @@ export class DeveloperListController {
 
   getInfoAboutDevelopers(devs){
     this.developers = [];
+    let limit = 0
     angular.forEach(devs, (dev) => {
       this.githubService.getDevelopers(dev['login'], 1)
         .then((response) => {
           dev['followers'] = response.data['followers'];
           dev['public_repos'] = response.data['public_repos'];
           dev['public_gists'] = response.data['public_gists'];
+          dev['html_url'] = response.data['html_url'];
           dev['email'] = response.data['email'];
           dev['name'] = response.data['name'];
           this.developers.push(dev);
+                      
         })
         .catch((error) => {
           this.$log.error('XHR Failed for getUsers.\n' + angular.toJson(error.data, true));
       });   
         
     });
-  }  
+  }
 }
