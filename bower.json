@@ -1,0 +1,22 @@
+{
+  "name": "Teste",
+  "description": "Teste Mundi",
+  "main": "",
+  "authors": [
+    "EricFreireSouza <ericfreire@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "react": "^15.4.1"
+  }
+}
