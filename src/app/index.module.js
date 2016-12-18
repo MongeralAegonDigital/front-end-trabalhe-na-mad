@@ -15,6 +15,7 @@ import { PaginationService } from '../app/providers/pagination-service/paginatio
 import { NavbarDirective } from '../app/components/navbar-component/navbar.directive';
 import { DeveloperDirective} from '../app/components/developer-component/developer.directive';
 import { FormDirective } from '../app/components/form-component/form.directive';
+import { FooterDirective } from '../app/components/footer-component/footer.directive';
 
 angular.module('frontEndTrabalheNaMad', [
  'ngResource', 
@@ -31,4 +32,5 @@ angular.module('frontEndTrabalheNaMad', [
   .controller('DeveloperListController', DeveloperListController)
   .directive('navbarComponent', NavbarDirective)
   .directive('developerComponent', DeveloperDirective)
-  .directive('formComponent', FormDirective);
+  .directive('formComponent', FormDirective)
+  .directive('footerComponent', FooterDirective);
