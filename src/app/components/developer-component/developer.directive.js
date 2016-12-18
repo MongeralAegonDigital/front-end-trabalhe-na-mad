@@ -14,7 +14,7 @@ export function DeveloperDirective() {
 
 class DeveloperController {
   
-  constructor ($log, $state, $timeout, githubService, stringService, paginationService) {
+  constructor ($log, $state, $timeout, $scope, githubService, stringService, paginationService) {
     'ngInject';
 
     //Initilizing some stuffs
@@ -30,6 +30,7 @@ class DeveloperController {
     //Angular dependencies
     this.$log = $log;
     this.$state = $state
+    this.$scope = $scope;
     this.$timeout = $timeout;
     
     //Custom dependencies
@@ -64,23 +65,13 @@ class DeveloperController {
   getDevelopers(){
     if (angular.isDefined(this.$state.params.username) && this.$state.params.username !== ''){
       this.githubService.searchDevelopers(this.$state.params.username)
-        .then((response) => {
-          this.getInfoAboutDevelopers(response.data.items.map(item => item));
-        })
-        .catch((error) => {
-          this.$log.error('XHR Failed for getUsers.\n' + angular.toJson(error.data, true));
-        });  
+        .then(response => this.getInfoAboutDevelopers(response.data.items.map(item => item)))
+        .catch(error => this.errorHandler(error));  
     } 
     else {
       this.githubService.getDevelopers()
-        .then((response) => {
-          if (response.data.length > 1)
-            this.getInfoAboutDevelopers(response.data);
-          
-        })
-        .catch((error) => {
-          this.$log.error('XHR Failed for getUsers.\n' + angular.toJson(error.data, true));
-        });  
+        .then((response) => { if (response.data.length > 1) this.getInfoAboutDevelopers(response.data) })
+        .catch(error => this.errorHandler(error));    
     } 
   }
 
@@ -109,16 +100,11 @@ class DeveloperController {
                       
         })
         .catch((error) => {
-          this.$log.error('XHR Failed for getUsers.\n' + angular.toJson(error.data, true));
-      });   
+          this.errorHandler(error);
+
+       });   
         
     });
-  }
-
-  getTotalItems(){
-    
-    
-    return this.totalItems
   }
 
   setPage(page){
@@ -128,6 +114,11 @@ class DeveloperController {
   pageChanged(){
     this.setPage(this.currentPage)
   } 
+
+  errorHandler(error){
+    this.$log.error('XHR Failed for getUsers.\n' + angular.toJson(error.data, true));
+    this.$scope.$emit('error', {"error": error.data});
+  }
 
 
   

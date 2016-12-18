@@ -1,6 +1,6 @@
 {
   "API_BASE": "https://api.github.com",
-  "API_TOKEN": "",
+  "API_TOKEN": "PUT YOUR TOKEN HERE",
   
   "DEVELOPERS_COMPONENT": {
       "TITLE": "Desenvolvedores",

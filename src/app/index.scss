@@ -3,6 +3,7 @@
  *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
  */
 $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+$mainHeigh: 100px;
 
 /**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
@@ -19,11 +20,15 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 }
 
 .thumbnail {
-  height: 200px;
+  height: $mainHeigh*2;
 
   img.pull-right {
-    width: 50px;
+    width: $mainHeigh/2;
   }
+}
+
+.top-error{
+  margin-top: $mainHeigh !important;
 }
 
 /**

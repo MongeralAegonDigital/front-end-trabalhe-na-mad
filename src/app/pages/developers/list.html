@@ -1,6 +1,13 @@
 <div class="container">
 
     <navbar-component></navbar-component>
-    <developer-component></developer-component>
+    <developer-component ng-if="!developerListCtrl.show"></developer-component>
+
+    <div class="row top-error" ng-if="developerListCtrl.show">
+      <div class="col-md-12">
+          <h1> Ops! Algo saiu errado, tente novamente </h1>
+          <a ui-sref="home" class="btn btn-primary"> Voltar </a>
+      </div>
+  </div>
 
 </div>
