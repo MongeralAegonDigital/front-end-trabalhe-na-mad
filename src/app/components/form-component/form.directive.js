@@ -13,24 +13,39 @@ export function FormDirective() {
 }
 
 class FormController {
-  constructor ($scope, $log, githubService) {
+  constructor ($scope, $log, $state, stringService) {
     'ngInject';
 
-    this.githubService = githubService
+    //Initiliazing some stuffs
     this.$log = $log;
     this.$scope = $scope;
-    this.name = '';
-    this.email = '';
+    this.username = '';
     this.submited = false;
+    this.$state = $state;
+    this.stringService = stringService;
+
+
+    //Strings constants
+    this.BTN_TEXT = '';
+    this.USERNAME_STR = '';
+    this.TITLE = '';
+
+    //Getting strings
+    this.getResource();
+    
   }
 
-  onSubmit(){
-    this.$log.info("Submiting form");
-    this.$log.info(this.name);
-    this.$log.info(this.email);
+  getResource(){
+    this.stringService.getResource().then((response)=>{
+      this.BTN_TEXT = response.data.FORM_COMPONENT.BTN_TEXT;
+      this.USERNAME = response.data.FORM_COMPONENT.USERNAME_STR;
+      this.TITLE = response.data.FORM_COMPONENT.TITLE;
+      
+    }, ()=>{})
+  }
+  
 
-    if (this.name !== '' && this.email !== '')
-      this.submited = true;
-      this.$scope.$broadcast('submited', {result: true})   
+  onSubmit(){
+    this.$state.transitionTo('developers', {username: this.username});
   }
 }

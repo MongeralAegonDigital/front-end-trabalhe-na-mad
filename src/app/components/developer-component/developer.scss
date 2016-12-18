@@ -3,5 +3,15 @@
 $height: 100px;
 
 developer-component{
-    margin-top: $height;
+    
+    .custom-margin{
+        margin-top: $height;
+    }
+    .custom-margin-developers {
+        margin-top: $height/2;
+    }
+    .custom-min-height{
+        min-height: $height*3 + 20;
+    }
+    
 }

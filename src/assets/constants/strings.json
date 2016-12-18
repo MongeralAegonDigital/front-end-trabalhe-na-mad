@@ -1,0 +1,18 @@
+{
+  "API_BASE": "https://api.github.com",
+  "API_TOKEN": "01fbd750def1554198eed124e2a444c6ae0c01e8",
+  
+  "DEVELOPERS_COMPONENT": {
+      "TITLE": "Desenvolvedores",
+      "REPOSITORIES": "Repositorios",
+      "FOLLOWERS": "Seguidores",
+      "FILTER": "Filtrar desenvolvedores"
+  },
+  "FORM_COMPONENT": {
+      "BTN_TEXT": "Buscar",
+      "USERNAME": "Digite o nome do usuário",
+      "SEARCH_ALL": "Buscar todos",
+      "SEARCH_BY_USERNAME": "Buscar pelo nome de usuário",
+      "TITLE": "Consulta de usuários do github"
+  }
+}

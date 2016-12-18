@@ -6,7 +6,10 @@ export function DeveloperDirective() {
     templateUrl: 'app/components/developer-component/developer.html',
     controller: DeveloperController,
     controllerAs: 'developerCtrl',
-    bindToController: true
+    bindToController: true,
+    scope: {
+        developers: '='
+    }
   };
 
   return directive;
@@ -14,27 +17,40 @@ export function DeveloperDirective() {
 
 class DeveloperController {
   
-  constructor ($scope, $log, githubService) {
+  constructor ($scope, $log, githubService, stringService) {
     'ngInject';
 
+    //Initilizing some stuffs
     this.githubService = githubService
-    this.developers = [];
+    this.$scope = $scope;
+    this.developers = this.$scope.developers;
     this.$log = $log;
+    this.stringService = stringService;
 
-    $scope.$on('submited', (_, params) => {
-      if (params.result){
-        this.submited = true;  
-        this.getDevelopers();
-      }
-    });
+
+    //String constants
+    this.TITLE = '';
+    this.REPOSITORIES = '';
+    this.FOLLOWERS = '';
+    this.FILTER = '';
+
+    this.getResource();
+       
   }
 
-  getDevelopers(){
-    this.githubService.getDevelopers().then((response) => {
-            this.developers = response.data;
-         }).catch((error) => {
-            this.$log.error('XHR Failed for getUsers.\n' + angular.toJson(error.data, true));
-        });   
-    }
+  getResource(){
+    this.stringService.getResource().then((response)=>{
+      this.TITLE = response.data.DEVELOPERS_COMPONENT.TITLE;
+      this.FOLLOWERS = response.data.DEVELOPERS_COMPONENT.FOLLOWERS;
+      this.REPOSITORIES = response.data.DEVELOPERS_COMPONENT.REPOSITORIES;
+      this.FILTER = response.data.DEVELOPERS_COMPONENT.FILTER;
+      
+    }, ()=>{})
+  }
+
+
+
+  
+   
   
 }

@@ -1,19 +1,45 @@
 <div class="row custom-margin" ng-if="!formCtrl.submited">
-  <div class="col-md-5">
+  <!--<div class="col-md-5">
     <form>
       <div class="form-group">
-        <label for='name'>Name</label>
-        <input type="text" ng-model="formCtrl.name" id="name" class="form-control" placeholder="Name">
+        <label for='name'>{{ formCtrl.NAME }}</label>
+        <input type="text" 
+               ng-model="formCtrl.name" 
+               id="name" 
+               class="form-control" 
+               placeholder="{{ formCtrl.NAME }}">
       </div>
 
       <div class="form-group">
-        <label for='email'>Email</label>
-        <input type="email" ng-model="formCtrl.email" id="email" class="form-control" placeholder="Email">
+        <label for='email'>{{ formCtrl.EMAIL }}</label>
+        <input type="email" 
+               ng-model="formCtrl.email" 
+               id="email" 
+               class="form-control"
+               placeholder="{{ formCtrl.EMAIL }}">
       </div>
       
       <div class="form-group">
-        <button class="btn btn-primary" ng-click="formCtrl.onSubmit()"> Buscar Desenvolvedores </button>
+        <button class="btn btn-primary" ng-click="formCtrl.onSubmit()"> {{ formCtrl.BTN_TEXT }} </button>
+      </div>
+    </form>
+  </div>-->
+  
+  <div class="col-md-5">
+    <h3> {{ formCtrl.TITLE }} </h3>
+    <form>
+      <div class="form-group">
+        <input type="text" 
+               ng-model="formCtrl.username" 
+               id="name" 
+               class="form-control" 
+               placeholder="{{ formCtrl.USERNAME_STR }}">
+      </div>
+      
+      <div class="form-group">
+        <button class="btn btn-primary" ng-click="formCtrl.onSubmit()"> {{ formCtrl.BTN_TEXT }} </button>
       </div>
     </form>
   </div>
 </div>
+
