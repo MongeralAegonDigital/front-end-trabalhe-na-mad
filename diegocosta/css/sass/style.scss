@@ -1,0 +1,16 @@
+@import "mixins.scss";
+
+body { 
+	@include cover-background('../image/bg-corpo-site.jpg');
+	margin-top: 3em;
+}
+.perfil > img{
+	@include border-radius(100%);
+}
+.thumbnail{
+	border:none;
+	margin-bottom: 0;
+}
+.panel-default{
+	margin-top: 3em;
+}
