@@ -1,0 +1,37 @@
+.layout {
+
+    .layout-user--info {
+        margin: {
+            top: 30px;
+        }
+
+        h1 {
+            color: $azul;
+            font: {
+                size: 3em;
+            }
+            display: inline;
+            vertical-align: top;
+            position: relative;
+            top: 30px;
+            left: 10px;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .layout-repositorio {
+        h2 {
+            font-size: 2em;
+            color: $cinzaEscuro
+        }
+
+        .layout-repositorio--title {
+            color: $azul;
+            font-weight: bold;
+        }
+    }
+}

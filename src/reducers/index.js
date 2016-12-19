@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
 
-import GitApi from './FormPrincipalReducer'
+import GitApi from './GetUserReducer'
 
 export default combineReducers({
     GitApi
