@@ -4,7 +4,7 @@ export function getUserResponses(nomeuser, user) {
 
     return function(dispatch) {
           axios.get('https://api.github.com/users/'+nomeuser+'/repos',{ headers: {
-                  'Authorization': 'token 6b8af95f775066631a45f2ef6009fc2823521f4b'
+                  'Authorization': 'token ae0bb29ea6af65835cc4ef6a1312af992d87f172'
               }
           })
           .then((response) => {
