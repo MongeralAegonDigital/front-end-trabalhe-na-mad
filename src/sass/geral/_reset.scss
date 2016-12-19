@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+html,
+body,
+main { height:100%; }
+
+a{
+  color: inherit;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:focus:hover { transition-duration: 0.1s; }
+
+  &:hover { text-decoration: inherit; }
+}
+
+form {
+
+  &:after,
+  &:before {
+    display: table;
+    content: " ";
+  }
+
+  &:after { clear: both; }
+}
+
+textarea {
+  max-width: 100%;
+  width: 100%;
+}

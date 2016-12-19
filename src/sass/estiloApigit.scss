@@ -1,0 +1,29 @@
+// Css raiz do projeto
+/*!
+ * Api Github - Lista repositorios
+ * Desenvolvido por Luciano Baraúna em: 21/10/2016
+ */
+
+// Libs
+@import "../sassLibs/fontawesome/font-awesome.scss";
+
+// Config
+@import "../sass/config/_variaveis.scss";
+@import "../sass/config/_placeholder.scss";
+@import "../sass/config/_cores.scss";
+
+// Tipografia
+@import "../sass/_tipografia.scss";
+
+// Geral
+@import "../sass/geral/_reset.scss";
+@import "../sass/geral/_medias.scss";
+@import "../sass/geral/_geral.scss";
+
+// Componentes
+@import "../sass/componentes/_btns.scss";
+@import "../sass/componentes/_loader.scss";
+@import "../sass/componentes/_alerts.scss";
+
+// Paginas
+@import "../sass/paginas/_index.scss";
