@@ -1,0 +1,71 @@
+<html ng-app="app" lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teste Front-End: Diego Costa</title>       
+        <link rel="stylesheet" href="css/style.min.css" charset="utf-8">
+    </head>
+    <body  ng-controller="gitHubDataController">
+        <div class="container">
+                <div class="row text-center">                     
+                        <div class="col-xs-6 col-sm-4 col-sm-push-4 col-xs-push-3 col-md-2 col-md-push-5">
+                            <a href="{{userData.html_url}}" class="thumbnail perfil">
+                              <img src="{{userData.avatar_url}}" alt="{{userData.name}}">
+                            </a>
+                            <span ng-hide="repoData"/>Aguarde um momento...</span>
+                            <span>{{userData.name}}</span>                            
+                        </div>
+                </div>               
+            <div class="panel  panel-default">
+                <div class="panel-heading">
+                    <form class="form-inline">
+                        <div class="row">
+                        <div class="col-xs-12 col-md-3">
+                            <h4>Repositórios <span class="badge">{{repoData.length}}</span></h4>
+                        </div>
+                        <div class="col-xs-12  col-md-9">
+                            <input ng-model="searchText" placeholder="Buscar no repositório..." class="form-control input-md">
+                        </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="panel-body">
+                    <div class="list-group">
+                        <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="list-group-item ">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h4>
+                                        <small>
+                                            <span ng-if="repo.fork" class="octicon octicon-repo-forked"></span>
+                                            <span ng-if="!repo.fork" class="octicon octicon-repo"></span>
+                                        </small>
+                                        <a href="{{repo.html_url}}" target="_blank" >
+                                            {{repo.name}}
+                                        </a>
+                                        <small>{{repo.description}}</small>
+                                    </h4>
+
+                                    <small>
+                                        <a href="{{repo.homepage}}" class="">
+                                            <i class="fa fa-link"></i> WebPage
+                                        </a>
+                                    </small>
+                                </div>
+                                <div class="col-md-4">
+                                    <dl class="dl-horizontal">
+                                      <dt>Atualizado: </dt>
+                                      <dd>{{repo.updated_at | date : short : timezone}}</dd>
+                                      <dt>Criado em:</dt>
+                                      <dd>{{repo.created_at| date : short : timezone}}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/app.min.js" charset="utf-8"></script>
+    </body>
+    </body>
+</html>

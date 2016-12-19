@@ -1,0 +1,28 @@
+{
+  "name": "Mongeral Aegon Digital",
+  "title": "Mongeral Aegon Digital",
+  "version": "1.0.0",
+  "description": "Front-End: Trabalhe na MAD",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MongeralAegonDigital/front-end-trabalhe-na-mad"
+  },
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssjanus": "*",
+    "grunt-exec": "*",
+    "grunt-potomo": "*",
+    "grunt-shell": "*",
+    "grunt-wp-i18n": "*"
+  }
+}
