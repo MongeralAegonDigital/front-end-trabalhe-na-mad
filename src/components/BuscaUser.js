@@ -1,5 +1,5 @@
 import React, { Component }  from 'react'
-import {getUserResponses, getToken} from '../actions/GetUserActions'
+import {getUserResponses} from '../actions/GetUserActions'
 import CampoBusca from './CampoBusca'
 import LayoutUser from './LayoutUser'
 
@@ -15,10 +15,6 @@ export default class BuscaUser extends Component {
     constructor() {
         super();
         this.handleUser = this.handleUser.bind(this);
-    }
-
-    componentWillMount() {
-        this.props.dispatch(getToken())
     }
 
     handleUser(e) {

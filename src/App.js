@@ -3,7 +3,6 @@ import { Provider }         from 'react-redux';
 import Header               from './components/Header';
 import MenuNav              from './components/MenuNav';
 import BuscaUser            from './components/BuscaUser'
-import AuthGit              from './components/AuthGit';
 import {Router, Route, browserHistory} from 'react-router';
 import store from './store';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -17,8 +16,7 @@ class App extends Component {
                 <MenuNav/>
                 <Provider store={store}>
                     <Router history={browserHistory}>
-                        <Route path="/" component={AuthGit}/>
-                        <Route path="user" component={BuscaUser}/>
+                        <Route path="/" component={BuscaUser}/>
                     </Router>
                 </Provider>
             </div>

@@ -21,16 +21,7 @@ export default function reducer(state = {
                 }
             }
         }
-        case "FETCH_CODE_FULFILLED": {
-            return {
-                ...state,
-                fetching: false,
-                fetched: true,
-                GitApi: {
-                    state: action.payload
-                }
-            }
-        }
+        
         default: {
 
         }
