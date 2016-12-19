@@ -1,0 +1,21 @@
+// Medias Queries
+
+
+@mixin media_min440 {
+  @media screen and (min-width:440px) {
+    @content;
+  }
+}
+
+@mixin media_min800 {
+  @media screen and (min-width:800px) {
+    @content;
+  }
+}
+
+@mixin media_min992 {
+  @media screen and (min-width:992px) {
+    @content;
+  }
+}
+

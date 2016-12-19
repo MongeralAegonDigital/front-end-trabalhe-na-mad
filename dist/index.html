@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Api Github</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#f55a2a">
+    <meta name="theme-color" content="#cacaca">
+    <link rel="stylesheet" href="css/estiloApigit.css"/>
+    <script src="js/scriptsApiGit_topo.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://sawpf.com/1.0.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- APP -->
+    <main class="app">
+        <h1 class="app_titl">Liste seus repositórios</h1>
+        <!-- FORM -->
+        <form class="app_formpesq" method="GET">
+            <input id="campo_apppesq" type="text" placeholder="Digite o nome de usuário">
+            <button id="btn_apppesq" class="btn btn--lg btn--laranja"><i class="fa fa-search"></i>PESQUISAR</button>
+        </form>
+        <!-- / FORM -->
+        <!-- RESULTADO -->
+        <section id="resultado">
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw loadCards"></i>
+            <div class="alert-danger">
+              <p>Encontramos um problema por favor, tente novamente.</p>
+            </div>
+        </section>
+        <!-- / RESULTADO -->
+    </main>
+    <!-- / APP -->
+     <script src="js/scriptsApiGit_rodape.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://sawpf.com/1.0.js"></script>
+    <![endif]-->
+</body>
+</html>
