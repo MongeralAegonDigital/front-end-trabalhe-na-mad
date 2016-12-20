@@ -1,0 +1,14 @@
+$azul:   #01579b;
+$branco: #fff;
+$cinzaEscuro: #263238;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+$tablet: "screen and (min-width : 768px)";
+$desktop: "screen and (min-width : 992px)";
+$largeDesktop: "screen and (min-width : 1200px)";
