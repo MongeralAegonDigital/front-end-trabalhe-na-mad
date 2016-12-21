@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="src/styles/style.css">
+	</head>
+	
+	<body>
+		<header>
+			<h1>
+				<a href="index.html">
+					Combate de Fronts
+				</a>	
+			</h1>
+		</header>
+		
+		<section id="containerGlobal">
+		</section>
+		
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/react/react.js"></script>
+		<script src="bower_components/react/react-dom.js"></script>
+		<script src="bower_components/browser.min.js"></script>
+		<script src="src/scripts/accessibility.js"></script>
+  
+		<script type="text/babel">
+			var data = [];
+			var ListProjects = React.createClass({
+				getInitialState: function() {
+					return {
+						state: '',
+						repos: ''
+					};
+				},
+
+				listProjects: function(event){
+					event.preventDefault();
+					var self = this;
+					var username = ReactDOM.findDOMNode(self.refs.username).value;
+					var url = "https://api.github.com/users/"+username+"/repos"+"?sort=stars&direction=desc";
+							
+					self.setState({
+						state: 'Carregando Repositórios...',
+						repos: self.state.repos
+					});
+					
+					$.ajax(url).done(function(data){
+						self.setState({
+							state: '',
+							repos: data.map(function(repo){
+								return (
+									<li>
+										{repo.name}
+									</li>
+								); 
+							})
+						});
+					});
+				},
+				
+				render: function() {
+					return (
+						<section id="containerProjects">
+							<form onSubmit={this.listProjects}>
+								<label for="userNameGit">Buscar Username do Github</label> &nbsp;
+								<input type="text" id="userNameGit" ref="username" /> &nbsp;
+								<input type="submit" value="Buscar" /> &nbsp;
+								<span>{this.state.state}</span>
+							</form>
+							<ul>
+								{this.state.repos}
+							</ul>
+						</section>
+					);
+				},	  
+			});
+			ReactDOM.render(<ListProjects	/>, document.getElementById('containerGlobal'));
+		</script>
+	</body>
+</html>

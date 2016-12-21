@@ -1,0 +1,11 @@
+<form>
+	<label for="busca">Buscar Username do Github</label><br>
+	<input type="text" id="busca" ng-model="username">
+	<input type="submit" ng-click="searchRepo(username)" value="Buscar">
+</form>
+
+<ul ng-repeat="name in repos">
+	<li ng-bind="name.name"></li>
+</ul>
+
+<p ng-bind-html="incorrectUsername" class="errorSearch"></p>

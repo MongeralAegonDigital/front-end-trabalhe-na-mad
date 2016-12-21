@@ -1,0 +1,28 @@
+{
+  "name": "projetoteste",
+  "description": "API github com React e Angular",
+  "main": "index",
+  "keywords": [
+    "react",
+    "angular"
+  ],
+  "authors": [
+    "Denis dos Santos"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.1.1",
+    "angular": "^1.4.9",
+    "angular-route": "^1.4.9",
+	"angular-sanitize": "^1.4.9",
+    "react": "^15.4.1"
+  }
+}

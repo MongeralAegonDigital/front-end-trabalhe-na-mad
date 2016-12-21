@@ -1,0 +1,68 @@
+*{text-decoration: none; padding: 0; margin: 0 auto; list-style: none;}
+
+html, body{width: 100%; height: auto;}
+
+header{float: left; width: 100%; height: 70px; background: #141414;}
+	header h1{font: 28px Helvetica; text-align: left; text-indent: 2.5%; color: #fff; margin-top: 18px;}
+		header h1 a{color: #fff;}
+
+#container{float: left; width: 80%; margin-left: 10%;}
+	#container .choiceFront{float: left; width: 100%; margin-top: 75px;}
+		#container .choiceFront p{font: 15px Helvetica; margin-top: 15px;}
+		#container .choiceFront p:first-child{margin-top: 95px;}
+		#container .choiceFront h2{float: left; width: 100%; font: 26px Helvetica; font-weight: 500;}
+		#container .choiceFront div{float: left; width: 45%; margin: 20px 0 0 10%;}
+		#container .choiceFront #personEmberFront{margin-left: 0;}
+		#container .choiceFront div h3{font: 20px Helvetica; font-weight: 500;}
+		#personEmberFront h3{border-bottom: 4px #a6120d solid;}
+		#personHalleyFront h3{border-bottom: 4px #61dafb solid;}
+		#container .choiceFront div p{float: left; width: 100%; font: 15px Helvetica; line-height: 18px; margin-top: 18px;}
+		#container .choiceFront div h4{float: left; width: 100%; font: 20px Helvetica; font-weight: 500; margin-top: 18px;}
+		#container .choiceFront div img{float: left; margin-top: 10px;}
+		#container .choiceFront #personEmberFront img{max-width: 29%; margin-left: 36%;}
+		#container .choiceFront #personHalleyFront img{max-width: 28%; margin-left: 36%;}
+		#container .choiceFront div a{float: right; width: 26%; padding: 10px 0 10px 0; background: #214478; font: 21px Helvetica; color: #fff; text-align: center; border: none; border-radius: 11px; margin: 18px 37% 0 0; cursor: pointer;}
+
+form{float: left; margin: 30px 0 0 2.5%; }
+	form label{font: 16px Helvetica; font-weight: bold;}
+	form input[type="text"]{width: 250px; height: 35px; background: #e6eff8; border-bottom: 2px #214478 solid; border-left: 2px #214478 solid; border-radius: 5px;}
+	form input[type="submit"]{width: 97px; height: 42px; background: #214478; font: 18px Helvetica; color: #fff; border: none; border-radius: 5px;}
+	form input[type="submit"]:hover{cursor: pointer;}
+
+#containerGlobal{float: left; width: 90%; height: auto; margin: 2% 0 0 5%;}
+
+ul, .errorSearch{float: left; width: 100%; margin-top: 20px;}
+	ul li:first-child{display: block; margin-top: 20px;}
+	ul li{font: 16px Helvetica; padding: 5px 0 5px 20px; border-bottom: 2px #214478 solid;}
+
+.errorSearch{font: 16px Helvetica; color: red; font-weight: bold; margin-left: 2.5%;}
+
+footer{float: left; width: 100%; height: 60px; border-top: 8px #141414 solid; color: #000; margin-top: 50px;}
+	footer h5, footer h6{font: 12px Helvetica; font-weight: bold; text-align: center; margin-top: 11px;}
+	footer h5{width: 210px; border-bottom: 2px #000 solid;}
+		footer h5 a, footer h6 a{color: #000;}
+		footer h6 a{border-bottom: 2px #000 solid;}
+    
+@media screen and (max-width: 479px){
+	#container{width: 95%; margin-left: 2.5%;}
+		#container .choiceFront{margin-top: 40px;}
+			#container .choiceFront div p{height: 72px;}
+			#container .choiceFront div h4{margin-top: 0;}
+			#container .choiceFront #personEmberFront img{max-width: 77%; margin-left: 11.5%;}
+			#container .choiceFront #personHalleyFront img{max-width: 74%; margin-left: 12%;}
+			#container .choiceFront div a{width: 58%; margin-right: 21%;}
+}
+
+@media screen and (min-width: 480px) and (max-width: 639px){
+	#container{width: 95%; margin-left: 2.5%;}
+		#container .choiceFront #personEmberFront img{max-width: 77%; margin-left: 11.5%;}
+		#container .choiceFront #personHalleyFront img{max-width: 74%; margin-left: 12%;}
+		#container .choiceFront div a{width: 58%; margin-right: 21%;}
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px){
+	#container{width: 90%; margin-left: 5%;}
+	#container .choiceFront #personEmberFront img{max-width: 60%; margin-left: 20%;}
+	#container .choiceFront #personHalleyFront img{max-width: 58%; margin-left: 21%;}
+	#container .choiceFront div a{width: 58%; margin-right: 21%;}
+}
