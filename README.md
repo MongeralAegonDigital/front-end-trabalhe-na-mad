@@ -1,19 +1,24 @@
-# Front-End: Trabalhe na MAD
+# Aplicação construída com Angular e React
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+A aplicação foi desenvolvida para buscar repositórios de um username inserido em formulário.
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+Para objetivo de estudo fiz um "comparativo" de Angular e React, ainda não possuía experiência com React.
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+As telas foram criadas de modo responsivo, no projeto também foi utilizado bower para adicionar as dependências.
 
-### Seria muito legal se:
+Para rodar a aplicação:
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
+É necessário ter o Node.js instalado. 
 
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
+Também é preciso instalar o Git com permissão para execução de CMD, isso é necessário para baixar as dependências indicadas no bower.
 
-Boa sorte!
+o Bower pode ser instalado via npm.
+
+Para executar a aplicação, utilizei o http-server, o instalei via npm.
+
+Após a sua instalação, basta entrar via cmd na pasta do projeto e executar o comando: http-server -p8080, ou especificar a porta de seu
+interesse.
+
+Após isso, basta abrir o localhost em seu navegador.
+
+E-mail para contato: denis_santos1989@hotmail.com
