@@ -1,0 +1,31 @@
+.search-box
+    margin: 1rem 0;
+    input
+        border: .1rem solid $dark-grey;
+        color: $darker-grey;
+        border-radius: .2rem;
+        padding: .1rem .5rem;
+        width: calc(90% - 1rem);
+        display: inline-block;
+        margin-right: .5rem;
+        &[type="submit"]
+            background-color: $white;
+            text-transform: uppercase;
+            color: $black;
+            border-bottom: .2rem solid $dark-grey;
+            cursor: pointer;
+            transition: .1s;
+            padding: .5rem;
+            margin-left: .5rem;
+            margin-right: 0;
+            width: 10%;
+            &:hover
+                border-bottom: .1rem solid $dark-grey;
+                margin-top: .1rem;
+    .result-informations
+        padding: 1rem 0
+        p
+            float: left
+        .clear-filters
+            float: right;
+            color: $darker-grey;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Generic from './model';
+import { Link } from 'react-router'
 
 export default class SearchBox extends Generic {
     constructor(props, context) {
@@ -9,6 +10,7 @@ export default class SearchBox extends Generic {
     };
 
     findUsers(e) {
+        e.preventDefault();
         var value = document.getElementById('searchUsers').value;
 
         this.context.router.push({
@@ -17,11 +19,25 @@ export default class SearchBox extends Generic {
         })
     };
 
+    renderResultInformations() {
+        if (this.props.query) {
+            return (
+                <div className="result-informations">
+                    <p>Mostrando resultados para <b>{this.props.query}</b></p>
+                    <Link to="/" className="clear-filters">Limpar filtros <b>X</b></Link>
+                </div>
+            )
+        }
+    };
+
     render() {
         return (
             <div className="search-box">
-                <input type="text" name="users" id="searchUsers" placeholder="Buscar usuário" />
-                <button onClick={this.findUsers}>Enviar</button>
+                <form onSubmit={this.findUsers}>
+                    <input type="text" name="users" id="searchUsers" placeholder="Buscar usuário" value={this.props.query} readOnly={this.props.query} required />
+                    <input type="submit" value="Enviar" />
+                </form>
+                {this.renderResultInformations()}
             </div>
         )
     }

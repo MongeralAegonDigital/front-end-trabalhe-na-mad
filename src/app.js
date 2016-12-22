@@ -1,9 +1,4 @@
-require("./scss/style.scss");
-require("./img/avatar.png");
-
-import { createDevTools } from 'redux-devtools'
-import LogMonitor from 'redux-devtools-log-monitor'
-import DockMonitor from 'redux-devtools-dock-monitor'
+require("./styl/style.styl");
 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -24,16 +19,7 @@ const reducer = combineReducers({
   routing: routerReducer
 })
 
-const DevTools = createDevTools(
-  <DockMonitor toggleVisibilityKey="ctrl-h" changePositionKey="ctrl-q">
-    <LogMonitor theme="tomorrow" preserveScrollTop={false} />
-  </DockMonitor>
-)
-
-const store = createStore(
-  reducer,
-  DevTools.instrument()
-)
+const store = createStore(reducer)
 
 const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
@@ -53,7 +39,6 @@ ReactDOM.render(
             </Route>
         </Route>
       </Router>
-      <DevTools />
     </div>
   </Provider>,
   document.getElementById('container')
