@@ -18,8 +18,10 @@ class ReposList extends Collection {
         return this.props.data.map((repo, i) => {
             return (
                 <li key={i}>
-                    <h3>{repo.name}</h3>
-                    <p>{repo.description}</p>
+                    <a href={repo.html_url} target="_blank">
+                        <h3>{repo.name}</h3>
+                        <p>{repo.description}</p>
+                    </a>
                 </li>
             )
         })
