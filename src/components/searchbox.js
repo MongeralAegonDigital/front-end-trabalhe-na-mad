@@ -24,7 +24,7 @@ export default class SearchBox extends Generic {
             return (
                 <div className="result-informations">
                     <p>Mostrando resultados para <b>{this.props.query}</b></p>
-                    <Link to="/" className="clear-filters">Limpar filtros <b>X</b></Link>
+                    <Link to="/" className="clear-filters">Limpar busca <b>X</b></Link>
                 </div>
             )
         }
