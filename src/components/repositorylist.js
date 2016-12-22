@@ -1,12 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { Collection }  from './model';
-import isEmpty from 'lodash/isEmpty';
-import clone from 'lodash/clone';
 import { add } from '../actions/repository'
-import { HOST } from '../config'
 import Loading from './loading'
-import { URLGITHUB } from '../config'
 
 
 class ReposList extends Collection {

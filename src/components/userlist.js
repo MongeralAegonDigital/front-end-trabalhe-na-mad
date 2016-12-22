@@ -1,14 +1,10 @@
 import React from 'react';
 import { Collection } from './model';
 import { Link } from 'react-router'
-import { hashHistory } from '../app'
-import delay from 'lodash/delay';
 import { connect } from 'react-redux'
 import { add } from '../actions/user'
-import SearchBox from './searchbox';
 import Home from './home';
 import Loading from './loading'
-import { URLGITHUB } from '../config'
 
 class UserList extends Collection {
     urlRoot() {
