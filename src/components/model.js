@@ -13,6 +13,9 @@ export class Collection extends Generic {
         this.state = {
             loading: true
         }
+
+        this.addOnStore = this.addOnStore.bind(this);
+        this.updateLoading = this.updateLoading.bind(this);
     };
 
     componentDidMount() {
@@ -23,12 +26,32 @@ export class Collection extends Generic {
         return '';
     };
 
+    setErrorResponse(error) {
+        console.log(error);
+    };
+
+    setResponseJson(response) {
+        return response.json()
+    };
+
+    addOnStore(response) {
+        this.props.add(response);
+    };
+
+    updateLoading() {
+        this.setState({loading: false})
+    };
+
+    urlRequest() {
+        return `${URLGITHUB}${this.urlRoot()}`;
+    };
+
     fetchData() {
-        fetch(`${URLGITHUB}${this.urlRoot()}`)
-        .then(response => response.json())
-        .then((response) => this.props.add(response))
-        .then(() => this.setState({loading: false}))
-        .catch((error) => console.error(error))
+        fetch(this.urlRequest())
+        .then(this.setResponseJson)
+        .then(this.addOnStore)
+        .then(this.updateLoading)
+        .catch(this.setErrorResponse)
     };
 };
 
