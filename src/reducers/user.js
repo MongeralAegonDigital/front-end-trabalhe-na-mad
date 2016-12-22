@@ -4,7 +4,7 @@ const initialState = {
 
 export default function update(state = initialState, action) {
   if (action.type === 'ADD') {
-    var data = action.amount;
+    var data = action.amount.items;
 
     return { data: data }
   }
