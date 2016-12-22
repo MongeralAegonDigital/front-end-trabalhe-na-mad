@@ -8,8 +8,8 @@
     "npm": "3.8.3"
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "jest"
+    "start": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
