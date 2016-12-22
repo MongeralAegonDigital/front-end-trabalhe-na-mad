@@ -9,7 +9,7 @@ export default class Home extends Generic {
                 <header>
                     <h3>Encontre repositórios por usuários no Github</h3>
                 </header>
-                <SearchBox />
+                <SearchBox query={this.props.query} />
                 {this.props.children}
             </div>
         )

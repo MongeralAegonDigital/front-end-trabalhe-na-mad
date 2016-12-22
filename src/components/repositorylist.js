@@ -1,27 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import Generic from './model';
+import { Collection }  from './model';
 import isEmpty from 'lodash/isEmpty';
 import clone from 'lodash/clone';
 import { add } from '../actions/repository'
 import { HOST } from '../config'
+import Loading from './loading'
+import { URLGITHUB } from '../config'
 
-class ReposList extends Generic {
-    constructor(props, context) {
-        super(props);
-    };
 
-    componentDidMount() {
-        this.fetchData();
-    };
-
-    fetchData() {
-        var urlGithub = 'https://api.github.com/';
-
-        fetch(`${urlGithub}users/${this.props.params.userLogin}/repos`)
-        .then(response => response.json())
-        .then((response) => this.props.add(response))
-        .catch((error) => console.error(error))
+class ReposList extends Collection {
+    urlRoot() {
+        return `users/${this.props.params.userLogin}/repos`
     };
 
     renderItems() {
@@ -36,17 +26,23 @@ class ReposList extends Generic {
     };
 
     render() {
-        return (
-            <div>
-                <header>
-                    <span onClick={this.context.router.goBack}>Voltar para listagem de usuário</span>
-                    <h3>Mostrando repositórios de {this.props.params.userLogin}</h3>
-                </header>
-                <div className="repos-list">
-                    {this.renderItems()}
+        if (this.state.loading) {
+            return <Loading />
+        } else {
+            return (
+                <div className="repository">
+                    <span className="go-back" onClick={this.context.router.goBack}>Voltar para listagem de usuário</span>
+                    <div className="result-container">
+                        <header>
+                            <h3>Mostrando repositórios de <b>{this.props.params.userLogin}</b></h3>
+                        </header>
+                        <ul className="result-container">
+                            {this.renderItems()}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
     }
 };
 
