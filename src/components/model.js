@@ -14,7 +14,7 @@ export class Collection extends Generic {
             loading: true
         }
 
-        this.addOnStore = this.addOnStore.bind(this);
+        this.save = this.save.bind(this);
         this.updateLoading = this.updateLoading.bind(this);
     };
 
@@ -34,7 +34,7 @@ export class Collection extends Generic {
         return response.json()
     };
 
-    addOnStore(response) {
+    save(response) {
         this.props.add(response);
     };
 
@@ -49,7 +49,7 @@ export class Collection extends Generic {
     fetchData() {
         fetch(this.urlRequest())
         .then(this.setResponseJson)
-        .then(this.addOnStore)
+        .then(this.save)
         .then(this.updateLoading)
         .catch(this.setErrorResponse)
     };
