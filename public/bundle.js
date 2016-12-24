@@ -60,8 +60,48 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	/**
+	 * @var {element DOM} elemento onde será renderizado a aplicação
+	 * 
+	 * @type {element DOM}
+	 */
+
+
+	/**
+	 * Importando o ReactDOM Module
+	 * 
+	 * @type 	{Module}
+	 */
 	var app = document.querySelector('.app');
 
+	/**
+	 * ReactDOM
+	 *
+	 * Responsável pela renderização da aplicação
+	 *
+	 * @type {Module}
+	 */
+
+
+	/**
+	 * Importando o MainComponent
+	 *  
+	 * Esse componente é responsável por exibir toda a aplicação 
+	 *  
+	 * @type       {Module}
+	 */
+	/**
+	 * app.js
+	 *
+	 * Arquivo responsável por definir o container da aplicação e o componente
+	 * que será renderizado neste container
+	 */
+
+	/**
+	 * Importando o React JS Module
+	 * 
+	 * @type 	{Module}
+	 */
 	_reactDom2.default.render(_react2.default.createElement(_MainComponent2.default, null), app);
 
 /***/ },
@@ -21484,6 +21524,174 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _SearchUserComponent = __webpack_require__(179);
+
+	var _SearchUserComponent2 = _interopRequireDefault(_SearchUserComponent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Importando o React JS Module
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @type 	{Module}
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	/**
+	 * Importando o SearchUserComponent
+	 *  
+	 * Esse componente é responsável por exibir toda a aplicação 
+	 *  
+	 * @type       {Module}
+	 */
+
+
+	/**
+	 * class MainComponent
+	 *
+	 * Classe responsável por criar o componente MainComponent que é o principal da aplicação
+	 * onde será renderizado todos os outros componentes
+	 */
+	var MainComponent = function (_React$Component) {
+	  _inherits(MainComponent, _React$Component);
+
+	  function MainComponent() {
+	    _classCallCheck(this, MainComponent);
+
+	    return _possibleConstructorReturn(this, (MainComponent.__proto__ || Object.getPrototypeOf(MainComponent)).apply(this, arguments));
+	  }
+
+	  _createClass(MainComponent, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'main',
+	        { className: 'wrapper' },
+	        _react2.default.createElement(
+	          'section',
+	          null,
+	          _react2.default.createElement(_SearchUserComponent2.default, null)
+	        )
+	      );
+	    }
+	  }]);
+
+	  return MainComponent;
+	}(_react2.default.Component);
+
+	/**
+	 * Exporta o componente para que possa ser utilizado em conjunto com outros componentes
+	 * e/ou possa ser renderizado
+	 */
+
+
+	exports.default = MainComponent;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FormComponent = __webpack_require__(180);
+
+	var _FormComponent2 = _interopRequireDefault(_FormComponent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Importando o React JS Module
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @type 	{Module}
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	/**
+	 * Importando o FormComponent
+	 *  
+	 * Esse componente é responsável por exibir o formulário que submete a busca
+	 * de usuários do GitHub 
+	 *  
+	 * @type       {Module}
+	 */
+
+
+	/**
+	 * class SearchUserComponent
+	 *
+	 * Classe responsável por criar o componente SearchUserComponent que é o container
+	 * da busca por usuários pela API do GitHub
+	 */
+	var SearchUserComponent = function (_React$Component) {
+	  _inherits(SearchUserComponent, _React$Component);
+
+	  function SearchUserComponent() {
+	    _classCallCheck(this, SearchUserComponent);
+
+	    return _possibleConstructorReturn(this, (SearchUserComponent.__proto__ || Object.getPrototypeOf(SearchUserComponent)).apply(this, arguments));
+	  }
+
+	  _createClass(SearchUserComponent, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container-form' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Buscar Usu\xE1rio GitHub'
+	        ),
+	        _react2.default.createElement(_FormComponent2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return SearchUserComponent;
+	}(_react2.default.Component);
+
+	/**
+	 * Exporta o componente para que possa ser utilizado em conjunto com outros componentes
+	 * e/ou possa ser renderizado
+	 */
+
+
+	exports.default = SearchUserComponent;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
@@ -21499,36 +21707,58 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Importando o React JS Module
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @type 	{Module}
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
-	var MainComponent = function (_React$Component) {
-		_inherits(MainComponent, _React$Component);
 
-		function MainComponent() {
-			_classCallCheck(this, MainComponent);
+	var FormComponent = function (_React$Component) {
+		_inherits(FormComponent, _React$Component);
 
-			return _possibleConstructorReturn(this, (MainComponent.__proto__ || Object.getPrototypeOf(MainComponent)).apply(this, arguments));
+		function FormComponent() {
+			_classCallCheck(this, FormComponent);
+
+			return _possibleConstructorReturn(this, (FormComponent.__proto__ || Object.getPrototypeOf(FormComponent)).apply(this, arguments));
 		}
 
-		_createClass(MainComponent, [{
-			key: 'render',
+		_createClass(FormComponent, [{
+			key: "handleSubmit",
+			value: function handleSubmit(event) {
+				event.preventDefault();
+			}
+		}, {
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'section',
-					null,
+					"form",
+					{ className: "form-search", onSubmit: this.handleSubmit },
 					_react2.default.createElement(
-						'p',
+						"div",
 						null,
-						'Teste'
-					)
+						_react2.default.createElement(
+							"label",
+							null,
+							"Nome:"
+						),
+						_react2.default.createElement("input", { type: "text", className: "input-name", placeholder: "Ex: henriqueViana", ref: "username" })
+					),
+					_react2.default.createElement("input", { type: "submit", className: "submit", value: "Buscar" })
 				);
 			}
 		}]);
 
-		return MainComponent;
+		return FormComponent;
 	}(_react2.default.Component);
 
-	exports.default = MainComponent;
+	/**
+	 * Exporta o componente para que possa ser utilizado em conjunto com outros componentes
+	 * e/ou possa ser renderizado
+	 */
+
+
+	exports.default = FormComponent;
 
 /***/ }
 /******/ ]);
