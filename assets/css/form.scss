@@ -1,0 +1,44 @@
+.container-form{
+	width: 20%;
+	min-width: 200px;
+	height: 100%;
+	background-color: $bg-form;
+	padding: 20px;
+	box-sizing: border-box;
+
+	.title{
+		text-align: center;
+		font-weight: 300;
+	}
+
+	.label{
+		display: block;
+		margin-top: 40px;
+		margin-bottom: 10px;
+
+	}
+
+	.input-name{
+		padding: 10px;
+		box-sizing: border-box;
+		border: none;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.submit{
+		@include button_mode;
+		width: 100%;
+		background-color: $default-button;
+		color: #fff;
+		border: 2px solid transparent;
+
+		transition: background-color .3s ease-in-out , color .3s ease-in-out , border .3s ease-in-out;
+
+		&:hover{
+			background-color: transparent;
+			color: $default-button;
+			border: 2px solid $default-button;
+		}
+	}
+}

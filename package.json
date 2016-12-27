@@ -1,0 +1,35 @@
+{
+  "name": "teste-trabalhe-na-mad",
+  "version": "1.0.0",
+  "description": "Teste para participação do processo de seleção da Mongeral Aegon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriqueViana/front-end-trabalhe-na-mad.git"
+  },
+  "author": "Henrique Viana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriqueViana/front-end-trabalhe-na-mad/issues"
+  },
+  "homepage": "https://github.com/henriqueViana/front-end-trabalhe-na-mad#readme",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "axios": "^0.15.3",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "webpack": "^1.14.0"
+  }
+}

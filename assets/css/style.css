@@ -1,0 +1,139 @@
+/**
+ * Background Colors
+ */
+/**
+ * Background Buttons
+ */
+/**
+ * Links
+ */
+/**
+ * Borders
+ */
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: arial , sans-serif;
+  font-size: 1.125em; }
+
+.app,
+.wrapper {
+  width: 100%;
+  height: 100%; }
+
+.wrapper {
+  display: flex; }
+
+.container-form {
+  width: 20%;
+  min-width: 200px;
+  height: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-sizing: border-box; }
+  .container-form .title {
+    text-align: center;
+    font-weight: 300; }
+  .container-form .label {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 10px; }
+  .container-form .input-name {
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px; }
+  .container-form .submit {
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    background-color: #04558e;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: background-color .3s ease-in-out , color .3s ease-in-out , border .3s ease-in-out; }
+    .container-form .submit:hover {
+      background-color: transparent;
+      color: #04558e;
+      border: 2px solid #04558e; }
+
+.container-data {
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box; }
+  .container-data-user {
+    text-align: center;
+    width: 200px;
+    margin-left: calc(50% - 100px);
+    margin-bottom: 40px; }
+    .container-data-user .photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%; }
+    .container-data-user .username,
+    .container-data-user .name,
+    .container-data-user .show-profile {
+      margin-top: 5px; }
+    .container-data-user .show-profile a {
+      text-decoration: none;
+      color: #04558e;
+      font-style: italic; }
+      .container-data-user .show-profile a:hover {
+        text-decoration: underline; }
+
+.repository {
+  width: calc(50% - 20px);
+  display: inline-block;
+  border: 3px solid #04558e;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .repository .name {
+    font-weight: bold;
+    font-size: 1.5rem; }
+  .repository .stars {
+    margin-bottom: 20px; }
+  .repository .button-repository {
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #04558e;
+    color: #fff;
+    border: 2px solid transparent;
+    margin-right: 20px;
+    transition: background-color .3s ease-in-out , color .3s ease-in-out , border .3s ease-in-out; }
+    .repository .button-repository:hover {
+      background-color: transparent;
+      color: #04558e;
+      border: 2px solid #04558e; }
+  .repository .button-issues {
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #e24700;
+    color: #fff;
+    border: 2px solid transparent;
+    margin-right: 20px;
+    transition: background-color .3s ease-in-out , color .3s ease-in-out , border .3s ease-in-out; }
+    .repository .button-issues:hover {
+      background-color: transparent;
+      color: #e24700;
+      border: 2px solid #e24700; }
+
+@media (max-width: 990px) {
+  .repository {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; } }
+
+/*# sourceMappingURL=style.css.map */

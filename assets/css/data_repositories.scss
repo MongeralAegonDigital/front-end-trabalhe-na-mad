@@ -1,0 +1,63 @@
+.repository{
+	width: calc(50% - 20px);
+	display: inline-block;
+	border: 3px solid $default-border;
+	border-radius: 5px;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	.name{
+		font-weight: bold;
+		font-size: 1.5rem; //24px
+		
+	}
+
+	.stars{
+		margin-bottom: 20px;
+	}
+
+	.button-repository{
+		@include button_mode;
+		text-decoration: none;
+		background-color: $default-button;
+		color: #fff;
+		border: 2px solid transparent;
+		margin-right: 20px;
+
+		transition: background-color .3s ease-in-out , color .3s ease-in-out , border .3s ease-in-out;
+
+		&:hover{
+			background-color: transparent;
+			color: $default-link;
+			border: 2px solid $default-border;
+		} 
+	}
+
+	.button-issues{
+		@include button_mode;
+		text-decoration: none;
+		background-color: $secondary-button;
+		color: #fff;
+		border: 2px solid transparent;
+		margin-right: 20px;
+
+		transition: background-color .3s ease-in-out , color .3s ease-in-out , border .3s ease-in-out;
+
+		&:hover{
+			background-color: transparent;
+			color: $secondary-link;
+			border: 2px solid $secondary-border;
+		} 
+	}
+}
+
+@media(max-width: 990px){
+	.repository{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
