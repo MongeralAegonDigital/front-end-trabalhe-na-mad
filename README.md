@@ -1,19 +1,17 @@
-# Front-End: Trabalhe na MAD
+# Desafio Front End Junior Mongeral
 
-Caro desenvolvedor, esse teste é um complemento no processo de seleção para a Mongeral Aegon.
+Autor: Rafael Ferreira Vianna
 
-Desenvolva uma aplicação que tenha um formulário que quando enviado consuma a API do Github (https://developer.github.com/v3/) e imprima as informações na tela. Pode ser qualquer informação de sua escolha, por exemplo: listar repositórios de um usuário, listar issues de um repositório, listar contribuidores de um repositório, etc.
+Email: rafael2vianna@gmail.com
 
-Não precisa ter um layout  muito arrojado, só estar bem estruturado.
+* Projeto desenvolvido para a vaga de front end junior
+* Framework utilizado: RiotJs
+* Task Runner utilizado: GruntJs
 
-### Seria muito legal se:
+Instruções para rodar o projeto:
 
-* Você usasse seu pré-processador CSS favorito.
-* Você usasse seu task-runner favorito (Grunt, Gulp, Broccoli ...)
-* Você não instalasse dependências na mão
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React.
-* Você usasse ES6.
-
-Para participar do teste dê um fork nesse repositório e crie um pull request com sua resposta. No README devem estar as instruções de como eu instalo e rodo sua aplicação.
-
-Boa sorte!
+ * Clone o repositório em sua máquina
+ * Pelo terminal, navegue até o diretório do projeto
+ * Entre na pasta web-project e rode o comando: npm-install
+ * Saia da pasta web-project e entre na pasta app. Rode o comando: http-server
+ * Caso você não tenha essa dependência instalada na sua máquina, rode o comando: npm install http-server -g e repita o passo anterior.
