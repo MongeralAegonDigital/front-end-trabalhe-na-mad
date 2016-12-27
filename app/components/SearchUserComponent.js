@@ -28,8 +28,8 @@ class SearchUserComponent extends React.Component{
 	render(){
 		return(
 			<div className="container-form">
-				<h2>Buscar Usuário GitHub</h2>
-				<FormComponent/>
+				<h2 className="title">Buscar Usuário GitHub</h2>
+				<FormComponent updateDataUser={this.props.updateDataUser} updateDataRepositories={this.props.updateDataRepositories}/>
 			</div>
 		)
 	}

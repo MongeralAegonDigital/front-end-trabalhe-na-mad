@@ -1,0 +1,36 @@
+.container-data{
+	width: 80%;
+	padding: 20px;
+	box-sizing: border-box;
+	
+	&-user{
+		text-align: center;
+		width: 200px;
+		margin-left: calc(50% - 100px);
+		margin-bottom: 40px;
+
+		.photo{
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+		}
+
+		.username , 
+		.name , 
+		.show-profile{
+			margin-top: 5px;
+		}
+
+		.show-profile{
+			a{
+				text-decoration: none;
+				color: $default-link;
+				font-style: italic;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
