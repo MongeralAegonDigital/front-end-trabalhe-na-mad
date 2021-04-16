@@ -1,4 +1,4 @@
-# Front-End: Trabalhe na MAD
+# Front-End: Trabalhe na MAG
 
 Caro desenvolvedor, esse teste é um complemento no processo de seleção para a MAG Seguros.
 
