@@ -1,0 +1,105 @@
+<div class="container">
+    <form id="formSearcb" class="formSearcb">
+        <input id='infoSearch' value="" name="dato" class="busca" type="text" placeholder ='Buscador GitHub'> 
+        <select name="modo" class="select" id='select'>
+            <option value="users">Users</option>
+            <option value="orgs">Org</option>
+        </select>
+        <button type="submit" id="btnKeyup" class="btn" (click)="buscaUsers()">Buscar</button>
+    </form>
+</div>
+
+
+<div class="content" >
+    <div *ngIf="noFoundUser as false; then thenBlockNotFound else elseBlockNotFound"></div>
+    <ng-template #elseBlockNotFound>
+        <div *ngIf="tutorial as true; then thenBlockTutorial else elseBlockTutorial"></div>
+        <ng-template #thenBlockTutorial>
+            <div class="tutorial">
+                <p>Pode pesquisar um perfil de usuario ou organização de GitHub </p>
+            </div>
+        </ng-template>
+        <ng-template #elseBlockTutorial>
+            <div class="noFound">
+                <img src="../../assets/img/Octocat.png" alt="No Found" width="250px">
+                <h2>Não foi encontrado seu usuario ou organização de GitHub </h2>
+            </div>
+        </ng-template>
+
+    </ng-template>
+    <ng-template #thenBlockNotFound>
+        <div  *ngIf="result as true">
+            <div class="containerResult" >
+                <figure class="" >
+                    <a href="{{ listUsers.html_url }}" target="_blank">
+                        <img  alt="picture" src="{{ listUsers.avatar_url }}" class="size">
+                    </a>
+                    <h1 class="login">{{ listUsers.login }}</h1>
+                    <p>{{ listUsers.bio }}</p>
+                    <div class="follow">
+                        <p>Followers: {{ listUsers.followers }}</p>
+                        <p>Following: {{ listUsers.following }}</p>
+                    </div>
+                    <p>Numero de repositórios públicos: {{ listUsers.public_repos }}</p>
+                    
+                    <!-- Ubicação -->
+                    <div *ngIf="listUsers.location == ''; then thenBlockLocation else elseBlockLocation"></div>
+                    <ng-template #thenBlockLocation></ng-template>
+                    <ng-template #elseBlockLocation><p>Ubicação: {{ listUsers.location }}</p></ng-template>
+                    
+                    <!-- Site -->
+                    <div *ngIf="listUsers.blog == ''; then thenBlockBlog else elseBlockBlog"></div>
+                    <ng-template #thenBlockBlog></ng-template>
+                    <ng-template #elseBlockBlog>Site: <a href="{{ listUsers.blog }}" target="_blank">{{ listUsers.blog }}</a></ng-template>
+                    
+                    
+                    <!-- Twitter -->
+                    <div *ngIf="listUsers.twitter_username == null; then thenBlockTwitter else elseBlockTwitter"></div>
+                    <ng-template #thenBlockTwitter></ng-template>
+                    <ng-template #elseBlockTwitter><p>Twitter: <a href="https://twitter.com/{{ listUsers.twitter_username}}" target="_blank">@{{ listUsers.twitter_username}}</a></p></ng-template>
+                    
+                    <button type="submit" id="btnKeyup" class="btn top" (click)="buscaRepo()">Repositories</button>
+                    
+                </figure>
+            </div>
+        </div>
+
+        <div *ngIf="this.repos.length > 0; then thenBlockRepos else elseBlockRepos"></div>
+        
+        <ng-template #thenBlockRepos>
+            <div class="content2" *ngIf="resultRepos as true">
+                <div class="containerRepos" >
+
+
+
+                    <div *ngIf="this.repos[0] === 'repos'; then thenBlockNotRepos else elseBlockRepos"></div>
+                    
+                    <ng-template #thenBlockNotRepos>
+                        <div>
+                            <h2>Repositories</h2>
+                        </div>
+                    </ng-template>
+
+
+                    <ng-template #elseBlockRepos>
+                        <h2>Repositories</h2>
+                        <div class="listRepos" *ngFor="let repo of repos">
+                            <a href="{{ repo.html_url}}" target="_blank"><h4 class="nameRepo">{{ repo.name}}</h4></a>
+                            <ng-template [ngIf]="repo.fork"><span>Fork</span></ng-template>
+                        </div>
+                    </ng-template>
+
+
+                </div>
+            </div>
+        </ng-template>
+
+        <ng-template #elseBlockRepos>
+            <div class="noFound">
+                <img class="imgNoFound" src="../../assets/img/Octocat.png" alt="No Found Repositorios" width="250px">
+                <h2>Este usuario não tem repositorios</h2>
+            </div>
+        </ng-template>
+
+    </ng-template>
+</div>
