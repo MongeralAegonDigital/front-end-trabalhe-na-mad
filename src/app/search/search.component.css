@@ -1,0 +1,236 @@
+.busca{
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    background-color: transparent;
+    border-radius: 6px;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    width: 25em;
+    height: 2.75em;
+}
+
+.busca::before{
+    background-color: rgb(30, 30, 30);
+}
+
+input:focus {
+    border: 2px solid #1cb495;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.tutorial{
+    width: 80%;
+    display: flex;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.noFound{
+    width: 80%;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(56 56 56 / 0.6);
+    padding-bottom: 40px;
+}
+
+.btn {
+    transition: background-color 0.2s, color 0.2s;
+    background-color: #009274;
+    border-radius: 6px;
+    border: 0 ;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    height: 2.75em;
+    line-height: 2.75em;
+    padding: 0 1.125em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0 1em;
+}
+
+.top{
+    margin-top: 20px;
+}
+.btnKeyup:hover {
+    background-color:#026d57;
+}
+
+
+.select{
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    background-color: transparent;
+    border-radius: 6px;
+    border: none;
+    border: solid 2px rgba(255, 255, 255, 0.35);
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    width: 7em;
+    height: 2.75em;
+    margin: 0 0 0 1em;
+}
+
+.select option{
+    background-color: rgb(30, 30, 30);
+}
+
+select:focus {
+    border: solid 2px #11e2b8;
+}
+
+.container {
+    display: block;
+    width: 80%;
+    padding-top: 1em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.formSearcb{
+    text-align: center;
+    
+}
+
+.containerResult{
+    display: block;
+    width: 20em;
+    /* width: 90%; */
+    padding-left: 2em;
+}
+
+figure {
+    text-align: center;
+    padding-top: 2em;
+    font-size: 13px;
+    line-height: 12px;
+    font-weight: 300;
+}
+
+.login{
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.follow{
+    display: inline-flex;
+
+}
+
+.follow p {
+    margin: 0 1em;
+}
+.size {
+    width: 100%;
+    border-radius: 50%
+}
+
+.content {
+    display: flex;
+}
+
+.content2{
+    width: 80%;
+    margin: 2em;
+}
+
+.listRepos{
+    background-color: rgb(56 56 56 / 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.nameRepo {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1em;
+}
+
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
+span {
+    padding: 1em;
+}
+
+.containerRepos:first-child {
+    margin-top: 0;
+}
+.containerRepos:not(:first-child) {
+    margin-top: 1em;
+}
+
+h4 {
+    margin: 0;
+}
+
+.imgNoFound{
+    margin-top: 50px;
+
+}
+
+
+@media (max-width: 767px) {
+    .busca{
+        width: 8em;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .containerResult{
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    h4 {
+        max-width: 23ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    h2 {
+        text-align: center;
+    }
+
+    .content2{
+        margin: 2em auto;
+    }
+
+}
+
+@media (max-width: 400px) {
+    h4 {
+        max-width: 15ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
