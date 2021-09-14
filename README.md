@@ -9,8 +9,8 @@ Não precisa ter um layout  muito arrojado, só estar bem estruturado.
 ### Seria muito legal se:
 
 * Você não instalasse dependências na mão;
-* Você usasse algum framework MVC(Angular, Ember, Backbone, Mithril ), CommonJS e/ou React;
-* Você usasse ES6;
+* Você usasse algum framework MVC (Ex: Angular), CommonJS e/ou React;
+* Você usasse ES6/7;
 * Você escrevesse testes TDD.
 
 Para participar do teste, dê um fork neste repositório e crie um pull request com sua resposta. No README devem estar as instruções de como instalamos e rodamos sua aplicação.
